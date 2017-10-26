@@ -1,0 +1,24 @@
+PODS:
+  - FSHelpers+Swift (2.2)
+  - SkyFloatingLabelTextField (3.2.1)
+
+DEPENDENCIES:
+  - FSHelpers+Swift (from `https://github.com/fs/FSHelper.git`)
+  - SkyFloatingLabelTextField (~> 3.2)
+
+EXTERNAL SOURCES:
+  FSHelpers+Swift:
+    :git: https://github.com/fs/FSHelper.git
+
+CHECKOUT OPTIONS:
+  FSHelpers+Swift:
+    :commit: e020aef27bc3c633d158947421b0d967fb6b9a2a
+    :git: https://github.com/fs/FSHelper.git
+
+SPEC CHECKSUMS:
+  FSHelpers+Swift: df9494a1d09ac433dcb3a88dcec6546a7a09c17b
+  SkyFloatingLabelTextField: 71d28906024e7d7e4460099b342f3ca7036a2e24
+
+PODFILE CHECKSUM: 37a67a24fa1137b02393c45f2b9457b30b429c8a
+
+COCOAPODS: 1.2.1
