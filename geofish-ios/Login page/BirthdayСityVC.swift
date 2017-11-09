@@ -29,7 +29,8 @@ class BirthdayCityVC: UIViewController, UITextFieldDelegate {
         datePicker.datePickerMode = UIDatePickerMode.date
         datePicker.minimumDate = Date(dateString: "01-01-1900")
         datePicker.maximumDate = Date(dateString: "01-01-2015")
-        datePicker.setDate(Date.distantPast, animated: true)
+        datePicker.locale = Locale(identifier: "RU")
+        datePicker.setDate(Date(dateString:"01-01-1980") , animated: true)
         datePicker.addTarget(self, action: #selector(updateTextField), for: .valueChanged)
         self.birthdayTextField.inputView = datePicker
     }

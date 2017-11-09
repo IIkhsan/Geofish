@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7FA9035CC2F39FFF7B92E1515ACE5B32"
+               BlueprintIdentifier = "9C6333A85A62EDA63CF95DF90AA63266"
                BuildableName = "Pods_geofish_ios.framework"
                BlueprintName = "Pods-geofish-ios"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7FA9035CC2F39FFF7B92E1515ACE5B32"
+            BlueprintIdentifier = "9C6333A85A62EDA63CF95DF90AA63266"
             BuildableName = "Pods_geofish_ios.framework"
             BlueprintName = "Pods-geofish-ios"
             ReferencedContainer = "container:Pods.xcodeproj">

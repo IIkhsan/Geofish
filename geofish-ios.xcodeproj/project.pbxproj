@@ -17,10 +17,14 @@
 		C0394FA51F9E0CCD0002D5D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0394FA41F9E0CCD0002D5D5 /* User.swift */; };
 		C0394FA71F9F3D800002D5D5 /* AddPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0394FA61F9F3D800002D5D5 /* AddPhotoVC.swift */; };
 		C0394FA91FA0FC420002D5D5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0394FA81FA0FC420002D5D5 /* DateExtension.swift */; };
+		C0394FAD1FA2338B0002D5D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0394FAC1FA2338B0002D5D5 /* GoogleService-Info.plist */; };
+		C0394FB01FA263C60002D5D5 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0394FAF1FA263C60002D5D5 /* NetworkHelper.swift */; };
+		C060D5831FB3442C00CB0898 /* VKAuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C060D5821FB3442C00CB0898 /* VKAuthHelper.swift */; };
 		C07511111F948ADB0035B906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07511101F948ADB0035B906 /* AppDelegate.swift */; };
 		C07511161F948ADB0035B906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07511141F948ADB0035B906 /* Main.storyboard */; };
 		C07511181F948ADB0035B906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07511171F948ADB0035B906 /* Assets.xcassets */; };
 		C075111B1F948ADB0035B906 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07511191F948ADB0035B906 /* LaunchScreen.storyboard */; };
+		C08584731FA5DE47002C166B /* AddPhotoExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08584721FA5DE47002C166B /* AddPhotoExtension.swift */; };
 		F5905FD605A455A08910668C /* Pods_geofish_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3AD464737E49C117D2759AC /* Pods_geofish_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,12 +40,16 @@
 		C0394FA41F9E0CCD0002D5D5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C0394FA61F9F3D800002D5D5 /* AddPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoVC.swift; sourceTree = "<group>"; };
 		C0394FA81FA0FC420002D5D5 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		C0394FAC1FA2338B0002D5D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C0394FAF1FA263C60002D5D5 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		C060D5821FB3442C00CB0898 /* VKAuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKAuthHelper.swift; sourceTree = "<group>"; };
 		C075110D1F948ADB0035B906 /* geofish-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "geofish-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07511101F948ADB0035B906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C07511151F948ADB0035B906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C07511171F948ADB0035B906 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C075111A1F948ADB0035B906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C075111C1F948ADB0035B906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C08584721FA5DE47002C166B /* AddPhotoExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoExtension.swift; sourceTree = "<group>"; };
 		C3AD464737E49C117D2759AC /* Pods_geofish_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_geofish_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF35AABBF6618B8CD2648475 /* Pods-geofish-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geofish-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-geofish-ios/Pods-geofish-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +93,7 @@
 				C0394F9F1F9E05310002D5D5 /* NamePasswordVC.swift */,
 				C0394FA11F9E0BF20002D5D5 /* BirthdayСityVC.swift */,
 				C0394FA61F9F3D800002D5D5 /* AddPhotoVC.swift */,
+				C08584721FA5DE47002C166B /* AddPhotoExtension.swift */,
 			);
 			path = "Login page";
 			sourceTree = "<group>";
@@ -105,6 +114,15 @@
 				C0394FA41F9E0CCD0002D5D5 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C0394FAE1FA263B10002D5D5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C060D5821FB3442C00CB0898 /* VKAuthHelper.swift */,
+				C0394FAF1FA263C60002D5D5 /* NetworkHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		C07511041F948ADB0035B906 = {
@@ -128,6 +146,7 @@
 		C075110F1F948ADB0035B906 /* geofish-ios */ = {
 			isa = PBXGroup;
 			children = (
+				C0394FAE1FA263B10002D5D5 /* Helpers */,
 				C0394FA31F9E0CAE0002D5D5 /* Model */,
 				C0394F941F9DCEB20002D5D5 /* Extensions */,
 				C02F5AF51F9645F600338F9D /* Login page */,
@@ -135,6 +154,7 @@
 				C07511171F948ADB0035B906 /* Assets.xcassets */,
 				C07511191F948ADB0035B906 /* LaunchScreen.storyboard */,
 				C075111C1F948ADB0035B906 /* Info.plist */,
+				C0394FAC1FA2338B0002D5D5 /* GoogleService-Info.plist */,
 			);
 			path = "geofish-ios";
 			sourceTree = "<group>";
@@ -202,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C075111B1F948ADB0035B906 /* LaunchScreen.storyboard in Resources */,
+				C0394FAD1FA2338B0002D5D5 /* GoogleService-Info.plist in Resources */,
 				C07511181F948ADB0035B906 /* Assets.xcassets in Resources */,
 				C07511161F948ADB0035B906 /* Main.storyboard in Resources */,
 			);
@@ -262,10 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C060D5831FB3442C00CB0898 /* VKAuthHelper.swift in Sources */,
 				C0394FA21F9E0BF20002D5D5 /* BirthdayСityVC.swift in Sources */,
+				C08584731FA5DE47002C166B /* AddPhotoExtension.swift in Sources */,
 				C0394F9A1F9DD2AB0002D5D5 /* SignUpVC.swift in Sources */,
 				C0394F981F9DD20C0002D5D5 /* WelcomeVC.swift in Sources */,
 				C0394F9E1F9E023C0002D5D5 /* LoginVC.swift in Sources */,
+				C0394FB01FA263C60002D5D5 /* NetworkHelper.swift in Sources */,
 				C07511111F948ADB0035B906 /* AppDelegate.swift in Sources */,
 				C0394FA51F9E0CCD0002D5D5 /* User.swift in Sources */,
 				C0394FA91FA0FC420002D5D5 /* DateExtension.swift in Sources */,
