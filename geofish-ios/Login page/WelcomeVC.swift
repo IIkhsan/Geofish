@@ -9,33 +9,44 @@
 import UIKit
 import VK_ios_sdk
 
-class WelcomeVC: UIViewController, VKSdkUIDelegate, VKSdkDelegate {
-    func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
-        
-    }
-    
-    func vkSdkUserAuthorizationFailed() {
-        
-    }
-    
+class WelcomeVC: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     func vkSdkShouldPresent(_ controller: UIViewController!) {
-        self.view.window?.rootViewController?.present(controller, animated: true)
+        self.navigationController?.topViewController?.present(controller, animated: true, completion: nil)
     }
     
     func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {
         
     }
     
-
+    func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
+        if ((result) != nil){
+            print(result.user.id)
+        }else{
+            print(result.error)
+        }
+    }
     
-
+    func vkSdkUserAuthorizationFailed() {
+        
+    }
+    
+    let VK_APP_ID = "6251653"
+    let SCOPE = ["email", "photos"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.clearColor()
         self.navigationController?.setBackButton()
-        let sdkInstance = VKSdk.initialize(withAppId: "6251653")
-        sdkInstance?.register(self as VKSdkDelegate)
-        sdkInstance?.uiDelegate.self
+        let sdkInstance = VKSdk.initialize(withAppId: self.VK_APP_ID)
+        sdkInstance?.register(self);
+        sdkInstance?.uiDelegate = self;
+        VKSdk.wakeUpSession(SCOPE) { (state, error) in
+            if state == VKAuthorizationState.authorized{
+                
+            }else{
+                print(error)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,8 +54,8 @@ class WelcomeVC: UIViewController, VKSdkUIDelegate, VKSdkDelegate {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func vkAutorizateButtonAction(_ sender: Any) {
-        let scope = ["friends", "email"]
-        VKSdk.authorize(scope)
+        
+        VKSdk.authorize(SCOPE)
     }
     @IBAction func okAutorizeButtonAction(_ sender: Any) {
         
