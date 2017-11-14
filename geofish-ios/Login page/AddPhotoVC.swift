@@ -15,43 +15,30 @@ class AddPhotoVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBOutlet weak var photoImage: UIImageView!
     @IBOutlet weak var addPhotoButton: UIButton!
     @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var replacePhotoButton: UIButton!
     
     let imagePicker: UIImagePickerController = UIImagePickerController()
     
     var user: User!
+    var addPhotoLabelText = "Добавить фотографию"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.clearColor()
         self.setBackButton()
+        self.addPhotoButton.addTarget(self, action: #selector(tapAddImage(_:)), for: .touchUpInside)
+        self.addPhotoButton.setTitle(addPhotoLabelText, for: .normal)
         imagePicker.delegate = self
         self.imagePicker.allowsEditing = true
     }
     
-    func registerUserInTheDataBase(user: User!){
-//        email, password, first_name, last_name, city, birthday, photo(optional)
-        let values = ["email": user.email, "password": user.password, "first_name": user.firstName, "last_name": user.lastName, "city": user.city, "birthday": user.birthday, "photo": "photo"] as Dictionary
-        
-        
-        Alamofire.request("https://geofish.herokuapp.com/api/v1/signup", method: .post, parameters: values).responseJSON { (response) in
-            print(response)
-        }
-        
-//        Alamofire.request(url, method: .post, parameters: values, encoding: JSONEncoding.default, headers: [:]).responseJSON { (response) in
-//            switch response.result{
-//            case .success(let JSON):
-//                print("response :-----> ",response)
-//            case .failure(let error):
-//                print("Request failed with error: \(error)")
-//                
-//            }
-//        }
-    }
-    
-    
     @IBAction func tapSkipButton(_ sender: Any) {
-        self.registerUserInTheDataBase(user: user)
+        self.changeButtonFunctions()
+        self.user.photo = ""
     }
     
+    @IBAction func tapAddImage(_ sender: Any) {
+        self.alertPhotoAndGalaryChoose()
+    }
 }

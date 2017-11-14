@@ -7,5 +7,6 @@ target 'geofish-ios' do
 	pod 'Firebase/Storage'
 	pod 'Alamofire', '~> 4.5' 
 	pod 'SVProgressHUD', '~> 2.2'
-    pod 'VK-ios-sdk'
+    	pod 'VK-ios-sdk'
+	pod 'Locksmith'
 end

@@ -15,5 +15,5 @@ class User{
     var lastName: String!
     var birthday: Date!
     var city: String!
-    var photo: String?
+    var photo: String!
 }

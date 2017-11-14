@@ -13,5 +13,69 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "geofish-ios/Login page/AddPhotoExtension.swift"
+            timestampString = "532345278.298446"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "registerUserInTheDataBase(user:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "geofish_ios.AddPhotoVC.registerUserInTheDataBase(user: Swift.ImplicitlyUnwrappedOptional&lt;geofish_ios.User&gt;, completion: (Swift.String, Swift.Int) -&gt; ()) -&gt; ()"
+                  moduleName = "geofish-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iikhsan/Documents/Project/geofish-ios/geofish-ios/Login%20page/AddPhotoExtension.swift"
+                  timestampString = "532345278.336716"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "2873">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in geofish_ios.AddPhotoVC.registerUserInTheDataBase(user: Swift.ImplicitlyUnwrappedOptional&lt;geofish_ios.User&gt;, completion: (Swift.String, Swift.Int) -&gt; ()) -&gt; ()"
+                  moduleName = "geofish-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iikhsan/Documents/Project/geofish-ios/geofish-ios/Login%20page/AddPhotoExtension.swift"
+                  timestampString = "532345278.34113"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "geofish-ios/Login page/AddPhotoExtension.swift"
+            timestampString = "532345278.298541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "complateRegistration(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

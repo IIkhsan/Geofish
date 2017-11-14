@@ -11,7 +11,7 @@ import SVProgressHUD
 import SkyFloatingLabelTextField
 import Alamofire
 
-class SignUpVC: UIViewController {
+class SignUpVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
     
     var user = User()
@@ -21,10 +21,16 @@ class SignUpVC: UIViewController {
         self.navigationController?.clearColor()
         self.setBackButton()
         emailTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        emailTextField.autocapitalizationType = .none
         // Do any additional setup after loading the view.
     }
-
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let _ = string.rangeOfCharacter(from: CharacterSet.uppercaseLetters){
+            return false
+        }
+        return true
+    }
     
     @IBAction func tapSignUpButton(_ sender: Any) {
         
@@ -54,7 +60,7 @@ class SignUpVC: UIViewController {
     
     //    MARK: Email validator
     func isValidEmail(testStr:String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailRegEx = "^([a-z0-9_\\.-]+)@([a-z0-9_\\.-]+)\\.([a-z\\.]{2,6})$"
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with:testStr)
