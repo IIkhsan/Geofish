@@ -20,10 +20,20 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
+			<string>Viewer</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>vk6251653</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>CFBundleURLName</key>
+			<string>ru.ok</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ok1258535168</string>
 			</array>
 		</dict>
 	</array>
@@ -31,6 +41,8 @@
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>ok1258535168</string>
+		<string>okauth</string>
 		<string>vkauthorize</string>
 		<string>vk-share</string>
 		<string>vk</string>
@@ -39,18 +51,8 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>vk.com</key>
-			<dict>
-				<key>Exception Requires Forward Secrecy</key>
-				<false/>
-				<key>ExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-				<key>Includes Subdomains</key>
-				<true/>
-			</dict>
-		</dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_NAME) camera use</string>
@@ -75,5 +77,27 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb{your-app-id}</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>286870491833387</string>
+    <key>FacebookDisplayName</key>
+    <string>GeoFish</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-api</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
+    </array>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Для переноса фотографии пользователя</string>
 </dict>
 </plist>

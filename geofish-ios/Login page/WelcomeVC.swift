@@ -8,39 +8,47 @@
 
 import UIKit
 import VK_ios_sdk
+import ok_ios_sdk
 import SVProgressHUD
 
 class WelcomeVC: UIViewController, VKSdkDelegate, VKSdkUIDelegate, UIAlertViewDelegate {
-    var SCOPE: Array<Any>!
+    var SCOPEVK: Array<Any>!
+    var SCOPEOK: Array<Any>!
     let VK_APP_ID = "6251653"
     let SELECT_VIEWCONTROLLER = "LoginSeque"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SCOPE = [VK_PER_FRIENDS, VK_PER_WALL, VK_PER_PHOTOS, VK_PER_EMAIL]
+        SCOPEVK = [VK_PER_FRIENDS, VK_PER_WALL, VK_PER_PHOTOS, VK_PER_EMAIL]
+        SCOPEOK = ["PHOTO_CONTENT", "APP_INVITE", "GET_EMAIL", "GET_EMAIL", "LONG_ACCESS_TOKEN"]
         self.navigationController?.clearColor()
         self.navigationController?.setBackButton()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        vkInit()
-    }
-    
     func vkInit(){
-        SVProgressHUD.setDefaultMaskType(.clear)
-        SVProgressHUD.show(withStatus: "Загрузка...")
         VKSdk.initialize(withAppId: VK_APP_ID).register(self)
         VKSdk.instance().uiDelegate = self
-        VKSdk.wakeUpSession(SCOPE) { (state, error) in
-            if state == VKAuthorizationState.authorized{ //если пользователь авторизован
+        VKSdk.wakeUpSession(SCOPEVK) { (state, error) in
+            if state == VKAuthorizationState.authorized{
+                //если пользователь авторизован
                 self.selectToRegisterOrAuthorizaton()
                 //сессия с пользователем сохранена, нет необходимости заправшивать доступ
             }else if (error != nil) {
                 self.alertMessage()
             }
         }
-        SVProgressHUD.dismiss(withDelay: 0.5)
+    }
+    
+    func okInit() {
+        OKSDK.authorize(withPermissions: SCOPEOK, success: { (data) in
+            OKSDK.invokeMethod("users.getCurrentUser", arguments: nil, success: { (data) in
+                print(data)
+            }, error: { (error) in
+                print(error)
+            })
+        }) { (error) in
+            print(error)
+        }
     }
     
     //Если пользователь уже авторизован в сессии то переход к странице
@@ -70,11 +78,11 @@ class WelcomeVC: UIViewController, VKSdkDelegate, VKSdkUIDelegate, UIAlertViewDe
     }
     
     @IBAction func vkAutorizateButtonAction(_ sender: Any) {
-        VKSdk.authorize(SCOPE)
+        VKSdk.authorize(SCOPEVK)
     }
     
     @IBAction func okAutorizeButtonAction(_ sender: Any) {
-        
+        okInit()
     }
     
     func alertMessage(){

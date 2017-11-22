@@ -19,11 +19,18 @@
 		C0394FA91FA0FC420002D5D5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0394FA81FA0FC420002D5D5 /* DateExtension.swift */; };
 		C0394FAD1FA2338B0002D5D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0394FAC1FA2338B0002D5D5 /* GoogleService-Info.plist */; };
 		C0394FB01FA263C60002D5D5 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0394FAF1FA263C60002D5D5 /* NetworkHelper.swift */; };
+		C050A1B11FBED78C0061AF05 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050A1B01FBED78C0061AF05 /* UIImageExtension.swift */; };
+		C050A1B31FBEE3610061AF05 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050A1B21FBEE3610061AF05 /* UITextFieldExtension.swift */; };
 		C07511111F948ADB0035B906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07511101F948ADB0035B906 /* AppDelegate.swift */; };
 		C07511161F948ADB0035B906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07511141F948ADB0035B906 /* Main.storyboard */; };
 		C07511181F948ADB0035B906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07511171F948ADB0035B906 /* Assets.xcassets */; };
 		C075111B1F948ADB0035B906 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07511191F948ADB0035B906 /* LaunchScreen.storyboard */; };
 		C08584731FA5DE47002C166B /* AddPhotoExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08584721FA5DE47002C166B /* AddPhotoExtension.swift */; };
+		C0C8E83B1FBF29E80076CD51 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C8E83A1FBF29E80076CD51 /* Profile.storyboard */; };
+		C0C8E83F1FBF2B170076CD51 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8E83E1FBF2B170076CD51 /* UserProfileVC.swift */; };
+		C0C8E8411FBF2B360076CD51 /* UserProfileTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8E8401FBF2B360076CD51 /* UserProfileTableExtension.swift */; };
+		C0C8E8441FBF2B860076CD51 /* UserProfilePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8E8421FBF2B860076CD51 /* UserProfilePostCell.swift */; };
+		C0C8E8451FBF2B860076CD51 /* UserProfilePostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C8E8431FBF2B860076CD51 /* UserProfilePostCell.xib */; };
 		F5905FD605A455A08910668C /* Pods_geofish_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3AD464737E49C117D2759AC /* Pods_geofish_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +48,8 @@
 		C0394FA81FA0FC420002D5D5 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		C0394FAC1FA2338B0002D5D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C0394FAF1FA263C60002D5D5 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		C050A1B01FBED78C0061AF05 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		C050A1B21FBEE3610061AF05 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		C075110D1F948ADB0035B906 /* geofish-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "geofish-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07511101F948ADB0035B906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C07511151F948ADB0035B906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +57,11 @@
 		C075111A1F948ADB0035B906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C075111C1F948ADB0035B906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C08584721FA5DE47002C166B /* AddPhotoExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoExtension.swift; sourceTree = "<group>"; };
+		C0C8E83A1FBF29E80076CD51 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		C0C8E83E1FBF2B170076CD51 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
+		C0C8E8401FBF2B360076CD51 /* UserProfileTableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableExtension.swift; sourceTree = "<group>"; };
+		C0C8E8421FBF2B860076CD51 /* UserProfilePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilePostCell.swift; sourceTree = "<group>"; };
+		C0C8E8431FBF2B860076CD51 /* UserProfilePostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfilePostCell.xib; sourceTree = "<group>"; };
 		C3AD464737E49C117D2759AC /* Pods_geofish_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_geofish_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF35AABBF6618B8CD2648475 /* Pods-geofish-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geofish-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-geofish-ios/Pods-geofish-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +116,8 @@
 				C0394F951F9DCEDE0002D5D5 /* NavigationControllerExtension.swift */,
 				C0394F9B1F9DD3570002D5D5 /* UIViewControllerExtension.swift */,
 				C0394FA81FA0FC420002D5D5 /* DateExtension.swift */,
+				C050A1B01FBED78C0061AF05 /* UIImageExtension.swift */,
+				C050A1B21FBEE3610061AF05 /* UITextFieldExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -146,6 +162,7 @@
 				C0394FAE1FA263B10002D5D5 /* Helpers */,
 				C0394FA31F9E0CAE0002D5D5 /* Model */,
 				C0394F941F9DCEB20002D5D5 /* Extensions */,
+				C0C8E8391FBF294B0076CD51 /* User Profile */,
 				C02F5AF51F9645F600338F9D /* Login page */,
 				C07511101F948ADB0035B906 /* AppDelegate.swift */,
 				C07511171F948ADB0035B906 /* Assets.xcassets */,
@@ -154,6 +171,18 @@
 				C0394FAC1FA2338B0002D5D5 /* GoogleService-Info.plist */,
 			);
 			path = "geofish-ios";
+			sourceTree = "<group>";
+		};
+		C0C8E8391FBF294B0076CD51 /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C0C8E83A1FBF29E80076CD51 /* Profile.storyboard */,
+				C0C8E83E1FBF2B170076CD51 /* UserProfileVC.swift */,
+				C0C8E8401FBF2B360076CD51 /* UserProfileTableExtension.swift */,
+				C0C8E8421FBF2B860076CD51 /* UserProfilePostCell.swift */,
+				C0C8E8431FBF2B860076CD51 /* UserProfilePostCell.xib */,
+			);
+			path = "User Profile";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,8 +247,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C8E8451FBF2B860076CD51 /* UserProfilePostCell.xib in Resources */,
 				C075111B1F948ADB0035B906 /* LaunchScreen.storyboard in Resources */,
 				C0394FAD1FA2338B0002D5D5 /* GoogleService-Info.plist in Resources */,
+				C0C8E83B1FBF29E80076CD51 /* Profile.storyboard in Resources */,
 				C07511181F948ADB0035B906 /* Assets.xcassets in Resources */,
 				C07511161F948ADB0035B906 /* Main.storyboard in Resources */,
 			);
@@ -280,15 +311,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C8E8441FBF2B860076CD51 /* UserProfilePostCell.swift in Sources */,
+				C0C8E8411FBF2B360076CD51 /* UserProfileTableExtension.swift in Sources */,
 				C0394FA21F9E0BF20002D5D5 /* BirthdayСityVC.swift in Sources */,
 				C08584731FA5DE47002C166B /* AddPhotoExtension.swift in Sources */,
 				C0394F9A1F9DD2AB0002D5D5 /* SignUpVC.swift in Sources */,
+				C050A1B31FBEE3610061AF05 /* UITextFieldExtension.swift in Sources */,
 				C0394F981F9DD20C0002D5D5 /* WelcomeVC.swift in Sources */,
 				C0394F9E1F9E023C0002D5D5 /* LoginVC.swift in Sources */,
 				C0394FB01FA263C60002D5D5 /* NetworkHelper.swift in Sources */,
+				C0C8E83F1FBF2B170076CD51 /* UserProfileVC.swift in Sources */,
 				C07511111F948ADB0035B906 /* AppDelegate.swift in Sources */,
 				C0394FA51F9E0CCD0002D5D5 /* User.swift in Sources */,
 				C0394FA91FA0FC420002D5D5 /* DateExtension.swift in Sources */,
+				C050A1B11FBED78C0061AF05 /* UIImageExtension.swift in Sources */,
 				C0394FA01F9E05310002D5D5 /* NamePasswordVC.swift in Sources */,
 				C0394F961F9DCEDE0002D5D5 /* NavigationControllerExtension.swift in Sources */,
 				C0394F9C1F9DD3570002D5D5 /* UIViewControllerExtension.swift in Sources */,

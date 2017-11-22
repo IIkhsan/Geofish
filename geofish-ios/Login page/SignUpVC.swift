@@ -34,17 +34,18 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func tapSignUpButton(_ sender: Any) {
         
-        if  isValidEmail(testStr: emailTextField.text!) {
+        if  emailTextField.isValid(.email) {
             print("valid")
             SVProgressHUD.setDefaultMaskType(.clear)
             checkDuplicateEmail(email: self.emailTextField.text!, completion: { (result) in
                 if result{
                     SVProgressHUD.showError(withStatus: "Такой email уже существует")
+                    
                 }else{
                     SVProgressHUD.showSuccess(withStatus: nil)
                     self.performSegue(withIdentifier: "showNamePassword", sender: nil)
                 }
-                SVProgressHUD.dismiss(withDelay: 0.3)
+                SVProgressHUD.dismiss(withDelay: 1)
             })
         }else{
             emailTextField.errorMessage = "Неверный формат email"
@@ -53,17 +54,8 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
     }
     
     
-    @objc func textFieldDidChange(textField: UITextField) {
-        self.emailTextField.errorMessage = nil
-        self.emailTextField.updateColors()
-    }
-    
-    //    MARK: Email validator
-    func isValidEmail(testStr:String) -> Bool {
-        let emailRegEx = "^([a-z0-9_\\.-]+)@([a-z0-9_\\.-]+)\\.([a-z\\.]{2,6})$"
-        
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with:testStr)
+    @objc func textFieldDidChange(textField: SkyFloatingLabelTextField) {
+        textField.clearErrorColor()
     }
     
     func checkDuplicateEmail(email: String, completion: @escaping (Bool) -> Void){

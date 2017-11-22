@@ -19,44 +19,44 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "geofish-ios/Login page/AddPhotoExtension.swift"
-            timestampString = "532345278.298446"
+            filePath = "geofish-ios/Login page/WelcomeVC.swift"
+            timestampString = "532691252.004823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "registerUserInTheDataBase(user:completion:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "okInit()"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "geofish_ios.AddPhotoVC.registerUserInTheDataBase(user: Swift.ImplicitlyUnwrappedOptional&lt;geofish_ios.User&gt;, completion: (Swift.String, Swift.Int) -&gt; ()) -&gt; ()"
+                  symbolName = "geofish_ios.WelcomeVC.okInit() -&gt; ()"
                   moduleName = "geofish-ios"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iikhsan/Documents/Project/geofish-ios/geofish-ios/Login%20page/AddPhotoExtension.swift"
-                  timestampString = "532345278.336716"
+                  urlString = "file:///Users/iikhsan/Documents/Project/geofish-ios/geofish-ios/Login%20page/WelcomeVC.swift"
+                  timestampString = "532691252.668716"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "2873">
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "17">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in geofish_ios.AddPhotoVC.registerUserInTheDataBase(user: Swift.ImplicitlyUnwrappedOptional&lt;geofish_ios.User&gt;, completion: (Swift.String, Swift.Int) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;) -&gt; () in geofish_ios.WelcomeVC.okInit() -&gt; ()"
                   moduleName = "geofish-ios"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iikhsan/Documents/Project/geofish-ios/geofish-ios/Login%20page/AddPhotoExtension.swift"
-                  timestampString = "532345278.34113"
+                  urlString = "file:///Users/iikhsan/Documents/Project/geofish-ios/geofish-ios/Login%20page/WelcomeVC.swift"
+                  timestampString = "532691252.673688"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "32">
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "15">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -67,14 +67,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "geofish-ios/Login page/AddPhotoExtension.swift"
-            timestampString = "532345278.298541"
+            filePath = "geofish-ios/Login page/WelcomeVC.swift"
+            timestampString = "532691252.008545"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "complateRegistration(_:)"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "okInit()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;) -&gt; () in geofish_ios.WelcomeVC.okInit() -&gt; ()"
+                  moduleName = "geofish-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iikhsan/Documents/Project/geofish-ios/geofish-ios/Login%20page/WelcomeVC.swift"
+                  timestampString = "532691252.681643"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Any&gt;) -&gt; () in geofish_ios.WelcomeVC.okInit() -&gt; ()"
+                  moduleName = "geofish-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iikhsan/Documents/Project/geofish-ios/geofish-ios/Login%20page/WelcomeVC.swift"
+                  timestampString = "532691252.68563"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

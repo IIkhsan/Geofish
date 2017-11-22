@@ -19,6 +19,7 @@ extension AddPhotoVC{
             print(token)
             print(id)
             do{
+                try Locksmith.deleteDataForUserAccount(userAccount: "Account")
                 try Locksmith.saveData(data: ["token": token, "id": id], forUserAccount: "Account")
             }catch{
                 print("Данные не сохранены")
@@ -60,8 +61,7 @@ extension AddPhotoVC{
         
         let storageRef = Storage.storage().reference().child("profile_images").child("\(imageName).png")
         
-        
-        if let uploadData = UIImagePNGRepresentation(self.photoImage.image!){
+        if let uploadData = self.photoImage.image?.jpeg(.high){
             storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
                 if error != nil{
                     print(error ?? "")

@@ -72,8 +72,8 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0Z-3k-cyI">
                                 <rect key="frame" x="208" y="557.5" width="143" height="51.5"/>
-                                <color key="backgroundColor" red="0.93333333333333335" green="0.50980392156862742" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="ok-icon"/>
+                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="f-icon"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="fs_cornerRadius">
                                         <real key="value" value="4"/>
@@ -328,6 +328,9 @@
                                         <real key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonAction:" destination="5Kn-NJ-qSD" eventType="touchUpInside" id="0E8-Ob-KhK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -763,8 +766,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="f-icon" width="19" height="34"/>
         <image name="logo" width="70" height="69"/>
-        <image name="ok-icon" width="20" height="35"/>
         <image name="photo-icon" width="102" height="102"/>
         <image name="vk-icon" width="39" height="23"/>
     </resources>

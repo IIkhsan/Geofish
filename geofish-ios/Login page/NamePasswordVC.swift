@@ -32,7 +32,7 @@ class NamePasswordVC: UIViewController {
             user.firstName = firstNameTextField.text
             if (lastNameTextField.text != nil) && (lastNameTextField.text != "") {
                 user.lastName = lastNameTextField.text
-                if isValidPassword(password: passwordTextField.text!){
+                if passwordTextField.isValid(.password){
                     user.password = passwordTextField.text
                     performSegue(withIdentifier: "showDBandCity", sender: nil)
                 }else{
@@ -48,19 +48,9 @@ class NamePasswordVC: UIViewController {
             firstNameTextField.updateColors()
         }
     }
-//    showDBandCity
     
     @objc func textFieldDidChange(textField: SkyFloatingLabelTextField) {
-        textField.errorMessage = nil
-        textField.updateColors()
-    }
-    
-    
-    func isValidPassword(password:String) -> Bool {
-        let passwordRegEx = "[A-Z0-9a-z._%+-]{6,}"
-        
-        let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
-        return passwordPredicate.evaluate(with:password)
+        textField.clearErrorColor()
     }
     
     // MARK: - Navigation

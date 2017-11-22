@@ -1,0 +1,6 @@
+[submodule "ok-ios-sdk"]
+	path = ok-ios-sdk
+	url = https://github.com/odnoklassniki/ok-ios-sdk.git
+[submodule "Pods/ok-ios-sdk"]
+	path = Pods/ok-ios-sdk
+	url = /Users/iikhsan/Documents/Project/geofish-ios/ok-ios-sdk
