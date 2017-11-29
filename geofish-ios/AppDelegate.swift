@@ -8,8 +8,9 @@
 
 import UIKit
 import Firebase
+import FBSDKCoreKit
 import VK_ios_sdk
-import ok_ios_sdk
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,21 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        let setting = OKSDKInitSettings()
-        setting.appId = "1258535168"
-        setting.appKey = "CBAKLEAMEBABABABA"
-        setting.controllerHandler = {
-            return self.window?.rootViewController
-        }
-        OKSDK.initWith(setting)
-        
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
     
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+//        return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
+//    }
+    
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        let ret:Bool = VKSdk.processOpen(url as URL!, fromApplication: sourceApplication)
-        OKSDK.open(url)
-        return ret
+        
+        VKSdk.processOpen(url as URL!, fromApplication: sourceApplication)
+        FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+        return true
     }
    
     func applicationWillResignActive(_ application: UIApplication) {
@@ -52,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+        FBSDKAppEvents.activateApp()
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 

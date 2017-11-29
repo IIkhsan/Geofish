@@ -9,4 +9,8 @@ target 'geofish-ios' do
 	pod 'SVProgressHUD', '~> 2.2'
     	pod 'VK-ios-sdk'
 	pod 'Locksmith'
+	pod 'FacebookCore'
+	pod 'FacebookLogin'
+	pod 'FacebookShare'
+	pod 'SwiftyJSON', '~> 4.0'
 end

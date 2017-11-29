@@ -80,7 +80,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="okAutorizeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KEG-qQ-QKh"/>
+                                    <action selector="okAutorizeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WsK-Xm-Ao3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome. GeoFish." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NX6-u0-Mr6">
@@ -117,6 +117,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="o5B-Nd-v5n"/>
+                    <connections>
+                        <outlet property="facebookButon" destination="n0Z-3k-cyI" id="Emx-Le-dqE"/>
+                        <outlet property="vkButton" destination="TuB-Ay-Av5" id="9GN-c2-Lmd"/>
+                        <segue destination="vta-1y-dYt" kind="show" identifier="socRegister" id="d6Z-Fs-qfG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCI-8E-yfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909.60000000000002" y="-212.74362818590706"/>
+            <point key="canvasLocation" x="910" y="-557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YqA-Hk-oPk">
@@ -361,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3a-5H-THG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="910" y="504"/>
+            <point key="canvasLocation" x="910" y="539"/>
         </scene>
         <!--Name PasswordVC-->
         <scene sceneID="azz-ve-tSQ">
@@ -412,7 +417,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEW-rP-XJd" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="225" width="327" height="51.5"/>
+                                <rect key="frame" x="24" y="225" width="327" height="52"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
@@ -446,7 +451,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dU8-WE-2fo" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="296.5" width="327" height="52.5"/>
+                                <rect key="frame" x="24" y="297" width="327" height="52.5"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -480,7 +485,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIG-ei-Pw6">
-                                <rect key="frame" x="24" y="369" width="327" height="52"/>
+                                <rect key="frame" x="24" y="369.5" width="327" height="51.5"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.4549019608" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Далее">
@@ -671,7 +676,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавление фото" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5G-IA-oyM">
-                                <rect key="frame" x="24" y="89" width="327" height="39"/>
+                                <rect key="frame" x="37.5" y="89" width="300" height="39"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -736,14 +741,12 @@
                             <constraint firstItem="l5G-IA-oyM" firstAttribute="centerX" secondItem="8H1-f5-RuF" secondAttribute="centerX" id="7MN-3d-psT"/>
                             <constraint firstItem="l5G-IA-oyM" firstAttribute="top" secondItem="8H1-f5-RuF" secondAttribute="top" constant="89" id="Ck9-yT-zfy"/>
                             <constraint firstItem="7sL-yb-nlc" firstAttribute="centerX" secondItem="8H1-f5-RuF" secondAttribute="centerX" id="DDN-0f-09T"/>
-                            <constraint firstItem="niM-TU-Q5g" firstAttribute="trailing" secondItem="l5G-IA-oyM" secondAttribute="trailing" constant="24" id="FEI-5h-CeR"/>
                             <constraint firstItem="HbZ-HJ-Bec" firstAttribute="top" secondItem="l5G-IA-oyM" secondAttribute="bottom" constant="30" id="JbG-g7-DCL"/>
                             <constraint firstItem="Lvz-BK-51o" firstAttribute="centerX" secondItem="8H1-f5-RuF" secondAttribute="centerX" id="MQx-bP-5Sj"/>
                             <constraint firstItem="KkL-kp-wMP" firstAttribute="centerX" secondItem="8H1-f5-RuF" secondAttribute="centerX" id="PMW-iI-CRo"/>
                             <constraint firstItem="KkL-kp-wMP" firstAttribute="top" secondItem="HbZ-HJ-Bec" secondAttribute="bottom" constant="29" id="PzB-fe-mbM"/>
                             <constraint firstItem="HbZ-HJ-Bec" firstAttribute="centerX" secondItem="8H1-f5-RuF" secondAttribute="centerX" id="RXn-qa-AVL"/>
                             <constraint firstItem="niM-TU-Q5g" firstAttribute="trailing" secondItem="Lvz-BK-51o" secondAttribute="trailing" constant="24" id="T7k-H5-fSE"/>
-                            <constraint firstItem="l5G-IA-oyM" firstAttribute="leading" secondItem="niM-TU-Q5g" secondAttribute="leading" constant="24" id="VXp-yg-cDW"/>
                             <constraint firstItem="Lvz-BK-51o" firstAttribute="top" secondItem="7sL-yb-nlc" secondAttribute="bottom" constant="20" id="ZdK-VW-1la"/>
                             <constraint firstItem="Lvz-BK-51o" firstAttribute="leading" secondItem="niM-TU-Q5g" secondAttribute="leading" constant="24" id="Zzs-7W-E1l"/>
                             <constraint firstItem="S0e-O0-0Lz" firstAttribute="top" secondItem="Lvz-BK-51o" secondAttribute="bottom" constant="15" id="biQ-Xe-mYR"/>
@@ -771,4 +774,7 @@
         <image name="photo-icon" width="102" height="102"/>
         <image name="vk-icon" width="39" height="23"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="d6Z-Fs-qfG"/>
+    </inferredMetricsTieBreakers>
 </document>

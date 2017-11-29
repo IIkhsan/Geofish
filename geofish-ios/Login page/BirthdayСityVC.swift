@@ -21,7 +21,7 @@ class BirthdayCityVC: UIViewController, UITextFieldDelegate {
         self.addDatePicker()
         self.birthdayTextField.addTarget(self, action: #selector(textFieldDidCahnged(textField:)), for: .editingDidBegin)
         self.cityTextField.addTarget(self, action: #selector(textFieldDidCahnged(textField:)), for: .editingChanged)
-        
+        loadUserData()
     }
     
     func addDatePicker() {
@@ -67,6 +67,13 @@ class BirthdayCityVC: UIViewController, UITextFieldDelegate {
         
         let datePredicate = NSPredicate(format: "SELF MATCHES %@", dateRegEx)
         return datePredicate.evaluate(with:date)
+    }
+    
+    func loadUserData() {
+        if user.uid != nil {
+            birthdayTextField.text = user.birthday?.toString(dateFormat: "dd-MM-yyyy")
+            cityTextField.text = user.city
+        }
     }
     
     // MARK: - Navigation

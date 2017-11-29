@@ -1,5 +1,30 @@
 PODS:
   - Alamofire (4.5.1)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - FacebookCore (0.3.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.27)
+  - FacebookLogin (0.3.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.3)
+    - FBSDKCoreKit (~> 4.27)
+    - FBSDKLoginKit (~> 4.27)
+  - FacebookShare (0.3.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.3)
+    - FBSDKCoreKit (~> 4.27)
+    - FBSDKShareKit (~> 4.27)
+  - FBSDKCoreKit (4.27.1):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.27.1):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.27.1):
+    - FBSDKCoreKit
   - Firebase/Core (4.4.0):
     - FirebaseAnalytics (= 4.0.4)
     - FirebaseCore (= 4.0.9)
@@ -32,16 +57,21 @@ PODS:
   - nanopb/encode (0.3.8)
   - SkyFloatingLabelTextField (3.2.1)
   - SVProgressHUD (2.2.2)
+  - SwiftyJSON (4.0.0)
   - VK-ios-sdk (1.4.6)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
+  - FacebookCore
+  - FacebookLogin
+  - FacebookShare
   - Firebase/Core
   - Firebase/Storage
   - FSHelpers+Swift (from `https://github.com/fs/FSHelper.git`)
   - Locksmith
   - SkyFloatingLabelTextField (~> 3.2)
   - SVProgressHUD (~> 2.2)
+  - SwiftyJSON (~> 4.0)
   - VK-ios-sdk
 
 EXTERNAL SOURCES:
@@ -55,6 +85,13 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
+  FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
+  FacebookShare: '0469964297ebd75f052be2c5083389a4208e82b7'
+  FBSDKCoreKit: 03365dad5d790249196ffad8be4f6d8a2d98f932
+  FBSDKLoginKit: 66ff53b73cffd967ab773e32fac39e90a60e6d46
+  FBSDKShareKit: 6a6a0ef9e850c741e4e1d7a7d21335205e997ec1
   Firebase: 3e92884a63e8f76d107c43a67d2ab9071e1eda10
   FirebaseAnalytics: 722b53c7b32bfc7806b06e0093a2f5180d4f2c5a
   FirebaseCore: ebe73f64302705e693b1de9919a76edbdd17a19d
@@ -67,8 +104,9 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SkyFloatingLabelTextField: 71d28906024e7d7e4460099b342f3ca7036a2e24
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   VK-ios-sdk: 7fd48bc5aaa6b96c3197c1987eb6593f2ea67331
 
-PODFILE CHECKSUM: 1b7e311f9b693810cb5833aeaf0b8e409f34e4a1
+PODFILE CHECKSUM: 6896d61742dab7f3b2cd0e80b7342df08bf3127d
 
 COCOAPODS: 1.2.1

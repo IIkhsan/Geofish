@@ -29,8 +29,12 @@ extension AddPhotoVC{
     }
     
     func registerUserInTheDataBase(user: User!, completion: @escaping(String, Int) -> Void){
-        //        email, password, first_name, last_name, city, birthday, photo(optional)
-        let values = ["email" : user.email, "password" : user.password, "first_name" : user.firstName, "last_name" : user.lastName, "city" : user.city, "birthday" : user.birthday, "photo" : user.photo] as Dictionary
+        var values: [String: Any]
+        if user.uid == nil{
+            values = ["email" : user.email, "password" : user.password, "first_name" : user.firstName, "last_name" : user.lastName, "city" : user.city, "birthday" : user.birthday, "photo" : user.photo] as Dictionary
+        }else{
+            values = ["uid" : user.uid, "first_name" : user.firstName, "last_name" : user.lastName, "city" : user.city, "birthday" : user.birthday, "photo" : user.photo] as Dictionary
+        }
         let header = ["Accept" : "application/json"]
         
         Alamofire.request("https://geofish.herokuapp.com/api/v1/signup", method: .post, parameters: values, headers: header).responseJSON { (response) in
@@ -42,6 +46,7 @@ extension AddPhotoVC{
                 default:
                     print("Ошибка запроса: \(status)")
                     SVProgressHUD.showError(withStatus: "Ошибка доступа")
+                    return
                 }
             }
             //to get JSON return value

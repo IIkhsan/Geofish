@@ -21,23 +21,46 @@ class NamePasswordVC: UIViewController {
         self.navigationController?.clearColor()
         self.setBackButton()
         
+        
         self.firstNameTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         self.lastNameTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         self.passwordTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        
+        loadUserData()
         // Do any additional setup after loading the view.
     }
 
     @IBAction func tapNextButton(_ sender: Any) {
+        checkTextFields()
+    }
+    
+    @objc func textFieldDidChange(textField: SkyFloatingLabelTextField) {
+        textField.clearErrorColor()
+    }
+    
+    func loadUserData() {
+        if user.uid != nil {
+            firstNameTextField.text = user.firstName
+            lastNameTextField.text = user.lastName
+            passwordTextField.isHidden = true
+        }
+    }
+    
+    func checkTextFields() {
         if (firstNameTextField.text != nil) && (firstNameTextField.text != "") {
             user.firstName = firstNameTextField.text
             if (lastNameTextField.text != nil) && (lastNameTextField.text != "") {
                 user.lastName = lastNameTextField.text
-                if passwordTextField.isValid(.password){
-                    user.password = passwordTextField.text
-                    performSegue(withIdentifier: "showDBandCity", sender: nil)
+                if user.uid == nil {
+                    if passwordTextField.isValid(.password){
+                        user.password = passwordTextField.text
+                        performSegue(withIdentifier: "showDBandCity", sender: nil)
+                    }else{
+                        passwordTextField.errorMessage = "Длинна пароля должна быть больше 6 символов"
+                        passwordTextField.updateColors()
+                    }
                 }else{
-                    passwordTextField.errorMessage = "Длинна пароля должна быть больше 6 символов"
-                    passwordTextField.updateColors()
+                    performSegue(withIdentifier: "showDBandCity", sender: nil)
                 }
             }else{
                 lastNameTextField.errorMessage = "Поле не должно быть пустым"
@@ -47,10 +70,6 @@ class NamePasswordVC: UIViewController {
             firstNameTextField.errorMessage = "Поле не должно быть пустым"
             firstNameTextField.updateColors()
         }
-    }
-    
-    @objc func textFieldDidChange(textField: SkyFloatingLabelTextField) {
-        textField.clearErrorColor()
     }
     
     // MARK: - Navigation

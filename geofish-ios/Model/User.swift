@@ -16,4 +16,5 @@ class User{
     var birthday: Date!
     var city: String!
     var photo: String!
+    var uid: Int!
 }
