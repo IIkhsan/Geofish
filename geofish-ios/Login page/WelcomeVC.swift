@@ -134,7 +134,10 @@ class WelcomeVC: UIViewController, VKSdkDelegate, VKSdkUIDelegate, UIAlertViewDe
         alert.addAction(defaultAction)
         self.present(alert, animated: true, completion: nil)
     }
-    
+    ///MARK: Авторизация через соц сеть
+    func signIN(){
+        
+    }
     ///MARK: Переход по странице заполнения оставшихся данных
     func addInformationForUser(){
         self.performSegue(withIdentifier: "socRegister", sender: self)
