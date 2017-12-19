@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IKz-qP-TvF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IKz-qP-TvF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -263,14 +263,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход через email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPy-xw-Qve">
-                                <rect key="frame" x="24" y="89" width="327" height="38.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
-                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K5i-1i-vYk" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="152.5" width="327" height="50"/>
+                                <rect key="frame" x="24" y="151.5" width="327" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="M6p-Wz-qnI"/>
                                 </constraints>
@@ -307,7 +301,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wWb-Mt-z95" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="214.5" width="327" height="50"/>
+                                <rect key="frame" x="24" y="213.5" width="327" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xii-2k-cur"/>
                                 </constraints>
@@ -344,7 +338,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScK-3J-uI5">
-                                <rect key="frame" x="24" y="280" width="327" height="50"/>
+                                <rect key="frame" x="24" y="279" width="327" height="50"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.4549019608" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="MHz-fD-P2v"/>
@@ -362,15 +356,20 @@
                                     <action selector="loginButtonAction:" destination="5Kn-NJ-qSD" eventType="touchUpInside" id="0E8-Ob-KhK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hZb-mq-XPd">
-                                <rect key="frame" x="24" y="614" width="149" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j60-VK-72b">
+                                <rect key="frame" x="24" y="89" width="78" height="38.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hZb-mq-XPd">
+                                <rect key="frame" x="24" y="399" width="123" height="31"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Забыли пароль?">
                                             <attributes>
                                                 <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="20" name=".AppleSystemUIFont"/>
+                                                <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 <integer key="NSUnderline" value="1"/>
                                             </attributes>
@@ -381,17 +380,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="K5i-1i-vYk" firstAttribute="top" secondItem="j60-VK-72b" secondAttribute="bottom" constant="24" id="0OY-la-4oZ"/>
                             <constraint firstItem="cIv-Tj-PTq" firstAttribute="trailing" secondItem="ScK-3J-uI5" secondAttribute="trailing" constant="24" id="1HN-nN-1BN"/>
-                            <constraint firstItem="sPy-xw-Qve" firstAttribute="leading" secondItem="cIv-Tj-PTq" secondAttribute="leading" constant="24" id="3ea-hO-pIX"/>
                             <constraint firstItem="cIv-Tj-PTq" firstAttribute="trailing" secondItem="K5i-1i-vYk" secondAttribute="trailing" constant="24" id="B6e-kw-fx3"/>
                             <constraint firstItem="ScK-3J-uI5" firstAttribute="leading" secondItem="cIv-Tj-PTq" secondAttribute="leading" constant="24" id="JT7-fF-d84"/>
                             <constraint firstItem="cIv-Tj-PTq" firstAttribute="trailing" secondItem="wWb-Mt-z95" secondAttribute="trailing" constant="24" id="K1h-nj-c7V"/>
-                            <constraint firstItem="sPy-xw-Qve" firstAttribute="top" secondItem="cIv-Tj-PTq" secondAttribute="top" constant="25" id="L0W-Je-VSi"/>
+                            <constraint firstItem="hZb-mq-XPd" firstAttribute="top" secondItem="ScK-3J-uI5" secondAttribute="bottom" constant="70" id="N61-6e-hgS"/>
                             <constraint firstItem="wWb-Mt-z95" firstAttribute="top" secondItem="K5i-1i-vYk" secondAttribute="bottom" constant="12" id="O4p-QT-DPS"/>
-                            <constraint firstItem="K5i-1i-vYk" firstAttribute="top" secondItem="sPy-xw-Qve" secondAttribute="bottom" constant="25" id="R9M-SF-riU"/>
+                            <constraint firstItem="j60-VK-72b" firstAttribute="top" secondItem="cIv-Tj-PTq" secondAttribute="top" constant="25" id="VYu-Pq-zCp"/>
+                            <constraint firstItem="j60-VK-72b" firstAttribute="leading" secondItem="cIv-Tj-PTq" secondAttribute="leading" constant="24" id="X13-CD-ki3"/>
                             <constraint firstItem="K5i-1i-vYk" firstAttribute="leading" secondItem="cIv-Tj-PTq" secondAttribute="leading" constant="24" id="Zgh-3x-Zjl"/>
-                            <constraint firstItem="cIv-Tj-PTq" firstAttribute="trailing" secondItem="sPy-xw-Qve" secondAttribute="trailing" constant="24" id="ibf-af-5xH"/>
                             <constraint firstItem="wWb-Mt-z95" firstAttribute="leading" secondItem="cIv-Tj-PTq" secondAttribute="leading" constant="24" id="jXo-fI-4vD"/>
+                            <constraint firstItem="hZb-mq-XPd" firstAttribute="leading" secondItem="cIv-Tj-PTq" secondAttribute="leading" constant="24" id="reF-gQ-Vku"/>
                             <constraint firstItem="ScK-3J-uI5" firstAttribute="top" secondItem="wWb-Mt-z95" secondAttribute="bottom" constant="15.5" id="sgt-kA-Scw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cIv-Tj-PTq"/>
@@ -456,6 +456,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Имя"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Имя"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="vta-1y-dYt" id="B1b-xU-EwX"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEW-rP-XJd" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="24" y="222.5" width="327" height="50"/>
@@ -493,6 +496,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Фамилия"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Фамилия"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="vta-1y-dYt" id="lyA-aH-ITh"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dU8-WE-2fo" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="24" y="292.5" width="327" height="50"/>
@@ -530,6 +536,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Пароль"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Пароль"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="vta-1y-dYt" id="gIV-2z-HW0"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIG-ei-Pw6">
                                 <rect key="frame" x="24" y="367.5" width="327" height="50"/>
@@ -575,6 +584,7 @@
                     <connections>
                         <outlet property="firstNameTextField" destination="Gfe-uC-btV" id="rX1-qt-af4"/>
                         <outlet property="lastNameTextField" destination="IEW-rP-XJd" id="Jww-m2-sow"/>
+                        <outlet property="nameAndPasswordLabel" destination="q4t-ga-FvS" id="kTc-5e-WHQ"/>
                         <outlet property="passwordTextField" destination="dU8-WE-2fo" id="eVX-Y1-mFq"/>
                         <segue destination="7Od-e8-Png" kind="show" identifier="showDBandCity" id="qwT-Zr-i00"/>
                     </connections>
@@ -785,7 +795,6 @@
                                 <rect key="frame" x="139.5" y="453" width="96" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="V1G-Bp-4eN"/>
-                                    <constraint firstAttribute="width" constant="96" id="iJg-mL-tmA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Пропустить"/>

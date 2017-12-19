@@ -8,12 +8,15 @@
 
 import UIKit
 
-class UserProfileVC: UIViewController {
+let cellID = "cellID"
 
+class UserProfileVC: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableView.register(FeedCell.self, forCellReuseIdentifier: cellID)
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +25,6 @@ class UserProfileVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

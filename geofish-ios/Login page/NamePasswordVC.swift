@@ -9,7 +9,8 @@
 import UIKit
 import SkyFloatingLabelTextField
 
-class NamePasswordVC: UIViewController {
+class NamePasswordVC: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var nameAndPasswordLabel: UILabel!
     @IBOutlet weak var firstNameTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var lastNameTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField! // <6 symbols
@@ -72,6 +73,34 @@ class NamePasswordVC: UIViewController {
         }
     }
     
+    // MARK: - TextField
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        moveTextField(textField, moveDistance: -100, up: true)
+    }
+    // Finish Editing The Text Field
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        moveTextField(textField, moveDistance: -100, up: false)
+    }
+    
+    // Hide the keyboard when the return key pressed
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Move the text field in a pretty animation!
+    func moveTextField(_ textField: UITextField, moveDistance: Int, up: Bool) {
+        if (self.view.superview?.bounds.height)! < 600{
+            let moveDuration = 0.3
+            let movement: CGFloat = CGFloat(up ? moveDistance : -moveDistance)
+            UIView.beginAnimations("animateTextField", context: nil)
+            UIView.setAnimationBeginsFromCurrentState(true)
+            UIView.setAnimationDuration(moveDuration)
+            self.nameAndPasswordLabel.alpha = up ? 0 : 100
+            self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+            UIView.commitAnimations()
+        }
+    }
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
