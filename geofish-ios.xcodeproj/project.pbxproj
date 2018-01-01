@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C00AE2691FE94E290013EA90 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00AE2681FE94E290013EA90 /* FeedCell.swift */; };
+		C031A1D31FF2E5320007886D /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C031A1D21FF2E5320007886D /* CustomTableView.swift */; };
 		C0394F961F9DCEDE0002D5D5 /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0394F951F9DCEDE0002D5D5 /* NavigationControllerExtension.swift */; };
 		C0394F981F9DD20C0002D5D5 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0394F971F9DD20C0002D5D5 /* WelcomeVC.swift */; };
 		C0394F9A1F9DD2AB0002D5D5 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0394F991F9DD2AB0002D5D5 /* SignUpVC.swift */; };
@@ -28,6 +29,7 @@
 		C07511181F948ADB0035B906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07511171F948ADB0035B906 /* Assets.xcassets */; };
 		C075111B1F948ADB0035B906 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07511191F948ADB0035B906 /* LaunchScreen.storyboard */; };
 		C08584731FA5DE47002C166B /* AddPhotoExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08584721FA5DE47002C166B /* AddPhotoExtension.swift */; };
+		C091C2291FF8EA4F00041CBB /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C091C2281FF8EA4F00041CBB /* CreatePostVC.swift */; };
 		C0C8E83B1FBF29E80076CD51 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C8E83A1FBF29E80076CD51 /* Profile.storyboard */; };
 		C0C8E83F1FBF2B170076CD51 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8E83E1FBF2B170076CD51 /* UserProfileVC.swift */; };
 		C0C8E8411FBF2B360076CD51 /* UserProfileTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8E8401FBF2B360076CD51 /* UserProfileTableExtension.swift */; };
@@ -37,6 +39,7 @@
 /* Begin PBXFileReference section */
 		3ABF10A1F8C23E8C1D48CB93 /* Pods-geofish-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geofish-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-geofish-ios/Pods-geofish-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		C00AE2681FE94E290013EA90 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		C031A1D21FF2E5320007886D /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		C0394F951F9DCEDE0002D5D5 /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
 		C0394F971F9DD20C0002D5D5 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		C0394F991F9DD2AB0002D5D5 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 		C075111A1F948ADB0035B906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C075111C1F948ADB0035B906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C08584721FA5DE47002C166B /* AddPhotoExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoExtension.swift; sourceTree = "<group>"; };
+		C091C2281FF8EA4F00041CBB /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
 		C0C8E83A1FBF29E80076CD51 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C0C8E83E1FBF2B170076CD51 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		C0C8E8401FBF2B360076CD51 /* UserProfileTableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableExtension.swift; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 				C0C8E83E1FBF2B170076CD51 /* UserProfileVC.swift */,
 				C0C8E8401FBF2B360076CD51 /* UserProfileTableExtension.swift */,
 				C00AE2681FE94E290013EA90 /* FeedCell.swift */,
+				C031A1D21FF2E5320007886D /* CustomTableView.swift */,
+				C091C2281FF8EA4F00041CBB /* CreatePostVC.swift */,
 			);
 			path = "User Profile";
 			sourceTree = "<group>";
@@ -318,8 +324,10 @@
 				C0394F981F9DD20C0002D5D5 /* WelcomeVC.swift in Sources */,
 				C0394F9E1F9E023C0002D5D5 /* LoginVC.swift in Sources */,
 				C0394FB01FA263C60002D5D5 /* NetworkHelper.swift in Sources */,
+				C091C2291FF8EA4F00041CBB /* CreatePostVC.swift in Sources */,
 				C0C8E83F1FBF2B170076CD51 /* UserProfileVC.swift in Sources */,
 				C07511111F948ADB0035B906 /* AppDelegate.swift in Sources */,
+				C031A1D31FF2E5320007886D /* CustomTableView.swift in Sources */,
 				C0394FA51F9E0CCD0002D5D5 /* User.swift in Sources */,
 				C0394FA91FA0FC420002D5D5 /* DateExtension.swift in Sources */,
 				C00AE2691FE94E290013EA90 /* FeedCell.swift in Sources */,

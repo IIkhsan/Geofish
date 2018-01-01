@@ -11,11 +11,18 @@ import UIKit
 let cellID = "cellID"
 
 class UserProfileVC: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: CustomTableView!
+    
+    @IBOutlet weak var userAvatarBackgroundImage: UIImageView!
+    @IBOutlet weak var userAvatarImage: UIImageView!
+    @IBOutlet weak var userClubsLabel: UILabel!
+    @IBOutlet weak var userSubscribeLabel: UILabel!
+    @IBOutlet weak var userSubscribersLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.clearColor()
         tableView.register(FeedCell.self, forCellReuseIdentifier: cellID)
     }
 

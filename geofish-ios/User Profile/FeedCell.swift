@@ -42,6 +42,8 @@ class FeedCell: UITableViewCell{
         let imageView = UIImageView()
         imageView.backgroundColor = UIColor.red
         imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 20
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -62,16 +64,24 @@ class FeedCell: UITableViewCell{
         return imageView
     }()
     
-    let likesCommentsLabel: UILabel = {
+    let likesLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12)
-        label.textColor = UIColor(red: 187, green: 187, blue: 187, alpha: 1)
+        label.textColor = UIColor.black
         label.text = "1213"
         return label
     }()
     
-    let likeButton = FeedCell.buttonForTitle("Like", imageName: "postOption")
-    let commentButton: UIButton = FeedCell.buttonForTitle("Comment", imageName: "postOption")
+    let commentsLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = UIColor.black
+        label.text = "1241"
+        return label
+    }()
+    
+    let likeButton = FeedCell.buttonForTitle("", imageName: "like-inactive")
+    let commentButton: UIButton = FeedCell.buttonForTitle("", imageName: "comment")
     let optionDotsButon: UIButton = FeedCell.buttonForTitle("", imageName: "postOption")
     
     
@@ -96,7 +106,8 @@ class FeedCell: UITableViewCell{
         
         addSubview(postTextView)
         addSubview(postImageView)
-        addSubview(likesCommentsLabel)
+        addSubview(likesLabel)
+        addSubview(commentsLabel)
         
         addSubview(optionDotsButon)
         addSubview(likeButton)
@@ -110,12 +121,12 @@ class FeedCell: UITableViewCell{
         addConstraintsWithFormat("V:|-24-[v0]", views: optionDotsButon)
         
         addConstraintsWithFormat("V:[v0]-16-[v1]", views: postImageView, commentButton)
-        addConstraintsWithFormat("V:[v0]-16-[v1]", views: postImageView, likesCommentsLabel)
+        addConstraintsWithFormat("V:[v0]-16-[v1]", views: postImageView, likesLabel)
         
         addConstraintsWithFormat("H:|-16-[v0]-24-|", views: postTextView)
         addConstraintsWithFormat("H:|[v0]|", views: postImageView)
         
-        addConstraintsWithFormat("H:|-15-[v0]-3-[v1]-40-[v2]", views: likeButton, likesCommentsLabel, commentButton)
+        addConstraintsWithFormat("H:|-15-[v0]-6-[v1]-40-[v2]-6-[v3]",aligin: .alignAllBottom, views: likeButton, likesLabel, commentButton, commentsLabel)
 //        addConstraintsWithFormat("H:|24-[v0]", views: optionDotsButon)
 
     }

@@ -37,7 +37,7 @@ extension UIColor {
 
 extension UIView {
     
-    func addConstraintsWithFormat(_ format: String, views: UIView...) {
+    func addConstraintsWithFormat(_ format: String, aligin: NSLayoutFormatOptions = NSLayoutFormatOptions(),  views: UIView...) {
         var viewsDictionary = [String: UIView]()
         for (index, view) in views.enumerated() {
             let key = "v\(index)"
@@ -45,7 +45,7 @@ extension UIView {
             view.translatesAutoresizingMaskIntoConstraints = false
         }
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: aligin, metrics: nil, views: viewsDictionary))
     }
     
 }
