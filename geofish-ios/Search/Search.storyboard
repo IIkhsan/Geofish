@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OFX-Fa-crD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="NGN-7N-o4P">
+            <objects>
+                <viewController id="OFX-Fa-crD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TyM-cF-Mxq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="uI9-wh-9KY">
+                                <rect key="frame" x="0.0" y="113" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="28I-Ak-CHi"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="78K-bj-eSr">
+                                <rect key="frame" x="81" y="73" width="213" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uI9-wh-9KY" firstAttribute="top" secondItem="0Ha-mk-Oen" secondAttribute="top" id="NvP-vf-ofs"/>
+                            <constraint firstItem="uI9-wh-9KY" firstAttribute="trailing" secondItem="0Ha-mk-Oen" secondAttribute="trailing" id="d8m-oX-5SZ"/>
+                            <constraint firstItem="uI9-wh-9KY" firstAttribute="leading" secondItem="0Ha-mk-Oen" secondAttribute="leading" id="ftY-Kt-rZp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Ha-mk-Oen"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="2T3-px-Awh">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="7TM-cA-BLo"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwE-s5-Rqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="171.36431784107947"/>
+        </scene>
+    </scenes>
+</document>

@@ -56,6 +56,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - SkyFloatingLabelTextField (3.2.1)
+  - SlideMenuController (0.4.0)
   - SVProgressHUD (2.2.2)
   - SwiftyJSON (4.0.0)
   - VK-ios-sdk (1.4.6)
@@ -70,6 +71,7 @@ DEPENDENCIES:
   - FSHelpers+Swift (from `https://github.com/fs/FSHelper.git`)
   - Locksmith
   - SkyFloatingLabelTextField (~> 3.2)
+  - SlideMenuController
   - SVProgressHUD (~> 2.2)
   - SwiftyJSON (~> 4.0)
   - VK-ios-sdk
@@ -103,10 +105,11 @@ SPEC CHECKSUMS:
   Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SkyFloatingLabelTextField: 71d28906024e7d7e4460099b342f3ca7036a2e24
+  SlideMenuController: 35785752b4c0fc5ff769da87c3c557c484df673b
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   VK-ios-sdk: 7fd48bc5aaa6b96c3197c1987eb6593f2ea67331
 
-PODFILE CHECKSUM: 6896d61742dab7f3b2cd0e80b7342df08bf3127d
+PODFILE CHECKSUM: bad705c924d0b591f5cc253580e6d07cb78a3a14
 
 COCOAPODS: 1.2.1

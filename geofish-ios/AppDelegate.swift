@@ -22,6 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        let containerViewController = ConteinerViewController()
+        
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window!.rootViewController = containerViewController
+//        window!.makeKeyAndVisible()
+        
         return true
     }
     

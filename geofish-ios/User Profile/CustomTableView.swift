@@ -20,7 +20,6 @@ class CustomTableView: UITableView {
         
         if let imageView = header.subviews.first as? UIImageView{
             height = imageView.constraints.filter{ $0.identifier == "height"}.first
-            print(height)
             bottom = header.constraints.filter{ $0.identifier == "bottom"}.first
         }
         

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 let cellID = "cellID"
 
@@ -20,18 +21,24 @@ class UserProfileVC: UIViewController {
     @IBOutlet weak var userSubscribersLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     
+    var delegate: UserProfileVCDelegate?
+    
+    @IBAction func slideMenu(_ sender: Any){
+        delegate?.toggleLeftPanel!()
+        print("tap")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.clearColor()
         tableView.register(FeedCell.self, forCellReuseIdentifier: cellID)
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension UserProfileVC: SlidePanelViewControllerDelegate{
+    func didSelectMenu(_ menu: Menu) {
+        print("select")
     }
     
-
-
-
+    
 }
