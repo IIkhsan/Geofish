@@ -81,6 +81,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="mapView" destination="FIY-wD-6lM" id="gjM-a2-9gi"/>
+                        <outlet property="menuButton" destination="Zy7-7H-wbN" id="8ZU-kv-B3b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUd-M2-3Pv" userLabel="First Responder" sceneMemberID="firstResponder"/>

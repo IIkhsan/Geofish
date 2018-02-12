@@ -21,6 +21,7 @@ class ConteinerViewController: UIViewController {
     var profileViewController: UserProfileVC!
     var newsViewController: NewsViewController!
     var mapViewController: MapViewController!
+    var searchViewController: SearchViewController!
     
     var storyboardName: String!
     var viewName: String?
@@ -38,7 +39,7 @@ class ConteinerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        storyboardName = "Map"
+        storyboardName = "Search"
         switch storyboardName {
         case "Profile":
             profileViewController = UIStoryboard(name: "Profile", bundle: Bundle.main).instantiateInitialViewController() as! UserProfileVC
@@ -51,6 +52,9 @@ class ConteinerViewController: UIViewController {
         case "Map":
             mapViewController = UIStoryboard(name: "Map", bundle: Bundle.main).instantiateInitialViewController() as! MapViewController
             centerNavigationController = UINavigationController(rootViewController: mapViewController)
+        case "Search":
+            searchViewController = UIStoryboard(name: "Search", bundle: Bundle.main).instantiateInitialViewController() as! SearchViewController
+            centerNavigationController = UINavigationController(rootViewController: searchViewController)
         default:
             break
         }

@@ -1,6 +1,0 @@
-framework module SlideMenuController {
-  umbrella header "SlideMenuController-umbrella.h"
-
-  export *
-  module * { export * }
-}
