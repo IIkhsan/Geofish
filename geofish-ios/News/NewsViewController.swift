@@ -21,7 +21,7 @@ class NewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.clearColor()
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 43, green: 33, blue: 69, alpha: 1)
         tableView.register(FeedCell.self, forCellReuseIdentifier: cellID)
         // Do any additional setup after loading the view.
     }

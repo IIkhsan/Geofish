@@ -44,6 +44,9 @@
 		C075111B1F948ADB0035B906 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07511191F948ADB0035B906 /* LaunchScreen.storyboard */; };
 		C08584731FA5DE47002C166B /* AddPhotoExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08584721FA5DE47002C166B /* AddPhotoExtension.swift */; };
 		C091C2291FF8EA4F00041CBB /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C091C2281FF8EA4F00041CBB /* CreatePostVC.swift */; };
+		C0BB9C6B2031CFF70010FC6C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BB9C6A2031CFF70010FC6C /* SearchViewController.swift */; };
+		C0BB9C6E2031D0380010FC6C /* Clubs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0BB9C6D2031D0380010FC6C /* Clubs.storyboard */; };
+		C0BB9C702031D04C0010FC6C /* ClubsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BB9C6F2031D04C0010FC6C /* ClubsViewController.swift */; };
 		C0C8E83B1FBF29E80076CD51 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C8E83A1FBF29E80076CD51 /* Profile.storyboard */; };
 		C0C8E83F1FBF2B170076CD51 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8E83E1FBF2B170076CD51 /* UserProfileVC.swift */; };
 		C0C8E8411FBF2B360076CD51 /* UserProfileTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8E8401FBF2B360076CD51 /* UserProfileTableExtension.swift */; };
@@ -91,6 +94,9 @@
 		C075111C1F948ADB0035B906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C08584721FA5DE47002C166B /* AddPhotoExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoExtension.swift; sourceTree = "<group>"; };
 		C091C2281FF8EA4F00041CBB /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
+		C0BB9C6A2031CFF70010FC6C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C0BB9C6D2031D0380010FC6C /* Clubs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Clubs.storyboard; sourceTree = "<group>"; };
+		C0BB9C6F2031D04C0010FC6C /* ClubsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsViewController.swift; sourceTree = "<group>"; };
 		C0C8E83A1FBF29E80076CD51 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C0C8E83E1FBF2B170076CD51 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		C0C8E8401FBF2B360076CD51 /* UserProfileTableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableExtension.swift; sourceTree = "<group>"; };
@@ -208,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				C05671472030ADB5002B821B /* Search.storyboard */,
+				C0BB9C6A2031CFF70010FC6C /* SearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -233,14 +240,15 @@
 		C075110F1F948ADB0035B906 /* geofish-ios */ = {
 			isa = PBXGroup;
 			children = (
+				C0BB9C6C2031D0290010FC6C /* Clubs */,
 				C05671462030ADA5002B821B /* Search */,
 				C05671412030A024002B821B /* Map */,
 				C0343EF8202F26DD00DC8432 /* News */,
+				C0C8E8391FBF294B0076CD51 /* User Profile */,
 				C0343EE5202CC6FA00DC8432 /* SlideMenu */,
 				C0394FAE1FA263B10002D5D5 /* Helpers */,
 				C0394FA31F9E0CAE0002D5D5 /* Model */,
 				C0394F941F9DCEB20002D5D5 /* Extensions */,
-				C0C8E8391FBF294B0076CD51 /* User Profile */,
 				C02F5AF51F9645F600338F9D /* Login page */,
 				C07511101F948ADB0035B906 /* AppDelegate.swift */,
 				C07511171F948ADB0035B906 /* Assets.xcassets */,
@@ -249,6 +257,15 @@
 				C0394FAC1FA2338B0002D5D5 /* GoogleService-Info.plist */,
 			);
 			path = "geofish-ios";
+			sourceTree = "<group>";
+		};
+		C0BB9C6C2031D0290010FC6C /* Clubs */ = {
+			isa = PBXGroup;
+			children = (
+				C0BB9C6D2031D0380010FC6C /* Clubs.storyboard */,
+				C0BB9C6F2031D04C0010FC6C /* ClubsViewController.swift */,
+			);
+			path = Clubs;
 			sourceTree = "<group>";
 		};
 		C0C8E8391FBF294B0076CD51 /* User Profile */ = {
@@ -333,6 +350,7 @@
 				C05671432030A035002B821B /* Map.storyboard in Resources */,
 				C05671482030ADB5002B821B /* Search.storyboard in Resources */,
 				C0C8E83B1FBF29E80076CD51 /* Profile.storyboard in Resources */,
+				C0BB9C6E2031D0380010FC6C /* Clubs.storyboard in Resources */,
 				C0343EFC202F270A00DC8432 /* News.storyboard in Resources */,
 				C07511181F948ADB0035B906 /* Assets.xcassets in Resources */,
 				C07511161F948ADB0035B906 /* Main.storyboard in Resources */,
@@ -398,12 +416,14 @@
 				C05BC6A320308AC8005EBED9 /* NewsViewControllerDelegate.swift in Sources */,
 				C0C8E8411FBF2B360076CD51 /* UserProfileTableExtension.swift in Sources */,
 				C0394FA21F9E0BF20002D5D5 /* BirthdayСityVC.swift in Sources */,
+				C0BB9C702031D04C0010FC6C /* ClubsViewController.swift in Sources */,
 				C08584731FA5DE47002C166B /* AddPhotoExtension.swift in Sources */,
 				C0394F9A1F9DD2AB0002D5D5 /* SignUpVC.swift in Sources */,
 				C050A1B31FBEE3610061AF05 /* UITextFieldExtension.swift in Sources */,
 				C0394F981F9DD20C0002D5D5 /* WelcomeVC.swift in Sources */,
 				C05BC6A5203094EF005EBED9 /* ConteinerViewControllerDelegate.swift in Sources */,
 				C0394F9E1F9E023C0002D5D5 /* LoginVC.swift in Sources */,
+				C0BB9C6B2031CFF70010FC6C /* SearchViewController.swift in Sources */,
 				C0343EEF202CC86000DC8432 /* SlidePanelViewController.swift in Sources */,
 				C0394FB01FA263C60002D5D5 /* NetworkHelper.swift in Sources */,
 				C091C2291FF8EA4F00041CBB /* CreatePostVC.swift in Sources */,

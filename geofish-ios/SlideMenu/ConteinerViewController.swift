@@ -20,6 +20,7 @@ class ConteinerViewController: UIViewController {
     var curentViewController: UIViewController!
     var profileViewController: UserProfileVC!
     var newsViewController: NewsViewController!
+    var mapViewController: MapViewController!
     
     var storyboardName: String!
     var viewName: String?
@@ -37,7 +38,7 @@ class ConteinerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        storyboardName = "News"
+        storyboardName = "Map"
         switch storyboardName {
         case "Profile":
             profileViewController = UIStoryboard(name: "Profile", bundle: Bundle.main).instantiateInitialViewController() as! UserProfileVC
@@ -47,6 +48,9 @@ class ConteinerViewController: UIViewController {
             newsViewController = UIStoryboard(name: "News", bundle: Bundle.main).instantiateInitialViewController() as! NewsViewController
             newsViewController.delegate = self
             centerNavigationController = UINavigationController(rootViewController: newsViewController)
+        case "Map":
+            mapViewController = UIStoryboard(name: "Map", bundle: Bundle.main).instantiateInitialViewController() as! MapViewController
+            centerNavigationController = UINavigationController(rootViewController: mapViewController)
         default:
             break
         }

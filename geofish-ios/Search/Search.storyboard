@@ -13,7 +13,7 @@
         <!--Title-->
         <scene sceneID="NGN-7N-o4P">
             <objects>
-                <viewController id="OFX-Fa-crD" sceneMemberID="viewController">
+                <viewController id="OFX-Fa-crD" customClass="SearchViewController" customModule="geofish_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TyM-cF-Mxq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
