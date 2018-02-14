@@ -39,7 +39,7 @@ class ConteinerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        storyboardName = "Search"
+        storyboardName = "Map"
         switch storyboardName {
         case "Profile":
             profileViewController = UIStoryboard(name: "Profile", bundle: Bundle.main).instantiateInitialViewController() as! UserProfileVC

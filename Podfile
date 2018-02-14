@@ -13,4 +13,5 @@ target 'geofish-ios' do
 	pod 'FacebookLogin'
 	pod 'FacebookShare'
 	pod 'SwiftyJSON', '~> 4.0'
+	pod 'GoogleMaps'
 end

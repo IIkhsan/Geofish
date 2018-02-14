@@ -10,7 +10,9 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import VK_ios_sdk
+import GoogleMaps
 
+let googleAPIKey = "AIzaSyBo9df9SeeOduQ6MOEmzXCHG2XSJGvCUFY"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        GMSServices.provideAPIKey(googleAPIKey)
         
         let containerViewController = ConteinerViewController()
         

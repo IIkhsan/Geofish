@@ -18,6 +18,10 @@
 		C0343EF7202DB61900DC8432 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0343EF6202DB61900DC8432 /* MenuTableViewCell.swift */; };
 		C0343EFA202F26FA00DC8432 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0343EF9202F26FA00DC8432 /* NewsViewController.swift */; };
 		C0343EFC202F270A00DC8432 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0343EFB202F270A00DC8432 /* News.storyboard */; };
+		C038092E203308A800129EE9 /* LakeInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C038092D203308A800129EE9 /* LakeInformation.storyboard */; };
+		C03809302033616800129EE9 /* PlaceMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038092F2033616800129EE9 /* PlaceMarker.swift */; };
+		C0380932203362AE00129EE9 /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0380931203362AE00129EE9 /* GooglePlace.swift */; };
+		C0380934203368F600129EE9 /* GoogleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0380933203368F600129EE9 /* GoogleDataProvider.swift */; };
 		C0394F961F9DCEDE0002D5D5 /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0394F951F9DCEDE0002D5D5 /* NavigationControllerExtension.swift */; };
 		C0394F981F9DD20C0002D5D5 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0394F971F9DD20C0002D5D5 /* WelcomeVC.swift */; };
 		C0394F9A1F9DD2AB0002D5D5 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0394F991F9DD2AB0002D5D5 /* SignUpVC.swift */; };
@@ -69,6 +73,10 @@
 		C0343EF6202DB61900DC8432 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		C0343EF9202F26FA00DC8432 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		C0343EFB202F270A00DC8432 /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		C038092D203308A800129EE9 /* LakeInformation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LakeInformation.storyboard; sourceTree = "<group>"; };
+		C038092F2033616800129EE9 /* PlaceMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarker.swift; sourceTree = "<group>"; };
+		C0380931203362AE00129EE9 /* GooglePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlace.swift; sourceTree = "<group>"; };
+		C0380933203368F600129EE9 /* GoogleDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
 		C0394F951F9DCEDE0002D5D5 /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
 		C0394F971F9DD20C0002D5D5 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		C0394F991F9DD2AB0002D5D5 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -178,6 +186,14 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		C038092C2033084500129EE9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				C038092D203308A800129EE9 /* LakeInformation.storyboard */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		C0394F941F9DCEB20002D5D5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +228,9 @@
 			children = (
 				C05671422030A035002B821B /* Map.storyboard */,
 				C05671442030A1F4002B821B /* MapViewController.swift */,
+				C038092F2033616800129EE9 /* PlaceMarker.swift */,
+				C0380931203362AE00129EE9 /* GooglePlace.swift */,
+				C0380933203368F600129EE9 /* GoogleDataProvider.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -246,6 +265,7 @@
 		C075110F1F948ADB0035B906 /* geofish-ios */ = {
 			isa = PBXGroup;
 			children = (
+				C038092C2033084500129EE9 /* New Group */,
 				C0B7794E203204720095BD9A /* AboutFishInformation */,
 				C0B7794A2031FE580095BD9A /* CustomSegmentedController.swift */,
 				C0BB9C6C2031D0290010FC6C /* Clubs */,
@@ -369,6 +389,7 @@
 				C0B7794D2031FE9A0095BD9A /* Search.storyboard in Resources */,
 				C0C8E83B1FBF29E80076CD51 /* Profile.storyboard in Resources */,
 				C0BB9C6E2031D0380010FC6C /* Clubs.storyboard in Resources */,
+				C038092E203308A800129EE9 /* LakeInformation.storyboard in Resources */,
 				C0343EFC202F270A00DC8432 /* News.storyboard in Resources */,
 				C07511181F948ADB0035B906 /* Assets.xcassets in Resources */,
 				C07511161F948ADB0035B906 /* Main.storyboard in Resources */,
@@ -430,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0380932203362AE00129EE9 /* GooglePlace.swift in Sources */,
 				C05671452030A1F4002B821B /* MapViewController.swift in Sources */,
 				C05BC6A320308AC8005EBED9 /* NewsViewControllerDelegate.swift in Sources */,
 				C0C8E8411FBF2B360076CD51 /* UserProfileTableExtension.swift in Sources */,
@@ -458,7 +480,9 @@
 				C050A1B11FBED78C0061AF05 /* UIImageExtension.swift in Sources */,
 				C0343EE9202CC75E00DC8432 /* Menu.swift in Sources */,
 				C0394FA01F9E05310002D5D5 /* NamePasswordVC.swift in Sources */,
+				C03809302033616800129EE9 /* PlaceMarker.swift in Sources */,
 				C0394F961F9DCEDE0002D5D5 /* NavigationControllerExtension.swift in Sources */,
+				C0380934203368F600129EE9 /* GoogleDataProvider.swift in Sources */,
 				C04ED3771FC71BD4000B984F /* StringExtension.swift in Sources */,
 				C0394F9C1F9DD3570002D5D5 /* UIViewControllerExtension.swift in Sources */,
 				C0343EED202CC83E00DC8432 /* ConteinerViewController.swift in Sources */,
