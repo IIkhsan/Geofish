@@ -12,10 +12,8 @@ import SwiftyJSON
 
 struct LakePlace{
     let name: String
-    let address: String
     let coordinate: CLLocationCoordinate2D
     let placeType: Bool
-    let id: Int
     let numberOfFish: Int
     let rate: Int
     

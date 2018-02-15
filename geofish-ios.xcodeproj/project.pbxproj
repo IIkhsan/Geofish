@@ -19,8 +19,7 @@
 		C0343EFA202F26FA00DC8432 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0343EF9202F26FA00DC8432 /* NewsViewController.swift */; };
 		C0343EFC202F270A00DC8432 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0343EFB202F270A00DC8432 /* News.storyboard */; };
 		C038092E203308A800129EE9 /* LakeInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C038092D203308A800129EE9 /* LakeInformation.storyboard */; };
-		C03809302033616800129EE9 /* PlaceMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038092F2033616800129EE9 /* PlaceMarker.swift */; };
-		C0380932203362AE00129EE9 /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0380931203362AE00129EE9 /* GooglePlace.swift */; };
+		C0380932203362AE00129EE9 /* LakePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0380931203362AE00129EE9 /* LakePlace.swift */; };
 		C0380934203368F600129EE9 /* GoogleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0380933203368F600129EE9 /* GoogleDataProvider.swift */; };
 		C0394F961F9DCEDE0002D5D5 /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0394F951F9DCEDE0002D5D5 /* NavigationControllerExtension.swift */; };
 		C0394F981F9DD20C0002D5D5 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0394F971F9DD20C0002D5D5 /* WelcomeVC.swift */; };
@@ -74,8 +73,7 @@
 		C0343EF9202F26FA00DC8432 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		C0343EFB202F270A00DC8432 /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		C038092D203308A800129EE9 /* LakeInformation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LakeInformation.storyboard; sourceTree = "<group>"; };
-		C038092F2033616800129EE9 /* PlaceMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarker.swift; sourceTree = "<group>"; };
-		C0380931203362AE00129EE9 /* GooglePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlace.swift; sourceTree = "<group>"; };
+		C0380931203362AE00129EE9 /* LakePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LakePlace.swift; sourceTree = "<group>"; };
 		C0380933203368F600129EE9 /* GoogleDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
 		C0394F951F9DCEDE0002D5D5 /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
 		C0394F971F9DD20C0002D5D5 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -228,8 +226,7 @@
 			children = (
 				C05671422030A035002B821B /* Map.storyboard */,
 				C05671442030A1F4002B821B /* MapViewController.swift */,
-				C038092F2033616800129EE9 /* PlaceMarker.swift */,
-				C0380931203362AE00129EE9 /* GooglePlace.swift */,
+				C0380931203362AE00129EE9 /* LakePlace.swift */,
 				C0380933203368F600129EE9 /* GoogleDataProvider.swift */,
 			);
 			path = Map;
@@ -451,7 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0380932203362AE00129EE9 /* GooglePlace.swift in Sources */,
+				C0380932203362AE00129EE9 /* LakePlace.swift in Sources */,
 				C05671452030A1F4002B821B /* MapViewController.swift in Sources */,
 				C05BC6A320308AC8005EBED9 /* NewsViewControllerDelegate.swift in Sources */,
 				C0C8E8411FBF2B360076CD51 /* UserProfileTableExtension.swift in Sources */,
@@ -480,7 +477,6 @@
 				C050A1B11FBED78C0061AF05 /* UIImageExtension.swift in Sources */,
 				C0343EE9202CC75E00DC8432 /* Menu.swift in Sources */,
 				C0394FA01F9E05310002D5D5 /* NamePasswordVC.swift in Sources */,
-				C03809302033616800129EE9 /* PlaceMarker.swift in Sources */,
 				C0394F961F9DCEDE0002D5D5 /* NavigationControllerExtension.swift in Sources */,
 				C0380934203368F600129EE9 /* GoogleDataProvider.swift in Sources */,
 				C04ED3771FC71BD4000B984F /* StringExtension.swift in Sources */,

@@ -34,8 +34,8 @@ class MapViewController: UIViewController {
     private func fetchNearbyPlaces(coordinate: CLLocationCoordinate2D) {
         mapView.clear()
         for lakepoint in lakePoints {
-            let marker = PlaceMarker(place: lakepoint)
-            marker.map = self.mapView
+//            let marker = PlaceMarker(place: lakepoint)
+//            marker.map = self.mapView
         }
     }
 }
