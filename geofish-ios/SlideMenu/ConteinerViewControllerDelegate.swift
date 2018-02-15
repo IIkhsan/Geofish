@@ -8,8 +8,7 @@
 
 import UIKit
 
-@objc
 protocol ConteinerViewControllerDelegate{
-    @objc optional func toggleLeftPanel()
-    @objc optional func collapseSlidePanel()
+    func toggleLeftPanel()
+    func collapseSlidePanel()
 }

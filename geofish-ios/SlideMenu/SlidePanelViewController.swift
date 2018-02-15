@@ -9,39 +9,21 @@
 import UIKit
 
 class SlidePanelViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
     
+    //MARK: - UI переменные
+    @IBOutlet weak var nameLabel                : UILabel!
+    @IBOutlet weak var userImageView            : UIImageView!
+    @IBOutlet weak var sideBarItemsTableView    : UITableView!
+    
+    //MARK: - Переменные
     var delegate: SlidePanelViewControllerDelegate?
-    var menuPoints: Array<Menu>!
+//    var currentItem: 
     
-    enum CellIdentifier{
-        static let MenuCell = "menuCell"
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.reloadData()
-    }
-}
-
-extension SlidePanelViewController: UITableViewDataSource{
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuPoints.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.MenuCell, for: indexPath) as! MenuTableViewCell
-        cell.configurationForMenu(menuPoints[indexPath.row])
-        return cell
-    }
 }
 
 extension SlidePanelViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let menu = menuPoints[indexPath.row]
-        delegate?.didSelectMenu(menu)
+//        let menu = menuPoints[indexPath.row]
+//        delegate?.didSelectMenu(menu)
     }
 }

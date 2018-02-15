@@ -8,7 +8,8 @@
 
 import UIKit
 
-struct Menu{
+struct Menu {
+    
     let title: String
     let image: UIImage
     let storyboardName: String

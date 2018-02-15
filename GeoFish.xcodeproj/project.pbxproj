@@ -15,7 +15,6 @@
 		C0343EEF202CC86000DC8432 /* SlidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0343EEE202CC86000DC8432 /* SlidePanelViewController.swift */; };
 		C0343EF1202CC87C00DC8432 /* SlidePanelViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0343EF0202CC87C00DC8432 /* SlidePanelViewControllerDelegate.swift */; };
 		C0343EF5202DB31D00DC8432 /* UserProfileVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0343EF4202DB31D00DC8432 /* UserProfileVCDelegate.swift */; };
-		C0343EF7202DB61900DC8432 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0343EF6202DB61900DC8432 /* MenuTableViewCell.swift */; };
 		C0343EFA202F26FA00DC8432 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0343EF9202F26FA00DC8432 /* NewsViewController.swift */; };
 		C0343EFC202F270A00DC8432 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0343EFB202F270A00DC8432 /* News.storyboard */; };
 		C038092E203308A800129EE9 /* LakeInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C038092D203308A800129EE9 /* LakeInformation.storyboard */; };
@@ -69,7 +68,6 @@
 		C0343EEE202CC86000DC8432 /* SlidePanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidePanelViewController.swift; sourceTree = "<group>"; };
 		C0343EF0202CC87C00DC8432 /* SlidePanelViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidePanelViewControllerDelegate.swift; sourceTree = "<group>"; };
 		C0343EF4202DB31D00DC8432 /* UserProfileVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVCDelegate.swift; sourceTree = "<group>"; };
-		C0343EF6202DB61900DC8432 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		C0343EF9202F26FA00DC8432 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		C0343EFB202F270A00DC8432 /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		C038092D203308A800129EE9 /* LakeInformation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LakeInformation.storyboard; sourceTree = "<group>"; };
@@ -164,11 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				C0343EE6202CC72D00DC8432 /* SlideMenu.storyboard */,
-				C0343EE8202CC75E00DC8432 /* Menu.swift */,
 				C0343EEC202CC83E00DC8432 /* ConteinerViewController.swift */,
 				C0343EEE202CC86000DC8432 /* SlidePanelViewController.swift */,
 				C0343EF0202CC87C00DC8432 /* SlidePanelViewControllerDelegate.swift */,
-				C0343EF6202DB61900DC8432 /* MenuTableViewCell.swift */,
 				C05BC6A4203094EF005EBED9 /* ConteinerViewControllerDelegate.swift */,
 			);
 			path = SlideMenu;
@@ -208,6 +204,7 @@
 		C0394FA31F9E0CAE0002D5D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C0343EE8202CC75E00DC8432 /* Menu.swift */,
 				C0394FA41F9E0CCD0002D5D5 /* User.swift */,
 			);
 			path = Model;
@@ -355,7 +352,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C07511081F948ADB0035B906 /* Build configuration list for PBXProject "geofish-ios" */;
+			buildConfigurationList = C07511081F948ADB0035B906 /* Build configuration list for PBXProject "GeoFish" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -469,7 +466,6 @@
 				C0343EF5202DB31D00DC8432 /* UserProfileVCDelegate.swift in Sources */,
 				C0C8E83F1FBF2B170076CD51 /* UserProfileVC.swift in Sources */,
 				C07511111F948ADB0035B906 /* AppDelegate.swift in Sources */,
-				C0343EF7202DB61900DC8432 /* MenuTableViewCell.swift in Sources */,
 				C031A1D31FF2E5320007886D /* CustomTableView.swift in Sources */,
 				C0394FA51F9E0CCD0002D5D5 /* User.swift in Sources */,
 				C0394FA91FA0FC420002D5D5 /* DateExtension.swift in Sources */,
@@ -654,7 +650,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C07511081F948ADB0035B906 /* Build configuration list for PBXProject "geofish-ios" */ = {
+		C07511081F948ADB0035B906 /* Build configuration list for PBXProject "GeoFish" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C075111D1F948ADB0035B906 /* Debug */,

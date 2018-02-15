@@ -9,12 +9,9 @@
 import UIKit
 
 class ConteinerViewController: UIViewController {
-
+    
+    //MARK: - Переменные
     var delegate: ConteinerViewControllerDelegate?
-    enum SlideOutState{
-        case bothCollapsed
-        case leftPanelExpanded
-    }
     
     var centerNavigationController: UINavigationController!
     var curentViewController: UIViewController!
@@ -37,8 +34,71 @@ class ConteinerViewController: UIViewController {
     
     let centerPanelExpandedOffset: CGFloat = 40
     
+    //MARK: - Enum'ы
+    enum SideBarItems: Int {
+        
+        case news = 0
+        case map
+        case profile
+        case clubs
+        case search
+        
+//        var description: String {
+//            switch self {
+//            case .news:
+//                return "Новости"
+//            case .map:
+//                return "Карта"
+//            case .profile:
+//                return "Профиль"
+//            case .clubs:
+//                return "Клубы"
+//            case .search:
+//                return "Поиск"
+//            }
+//        }
+//
+//        var activeImage: UIImage? {
+//            switch self {
+//            case .news:
+//                return UIImage(named: )
+//            case .map:
+//                return UIImage(named: )
+//            case .profile:
+//                return UIImage(named: )
+//            case .clubs:
+//                return UIImage(named: )
+//            case .search:
+//                return UIImage(named: )
+//            }
+//        }
+        
+//        var inactionImage: UIImage? {
+//            switch self {
+//            case .news:
+//                return UIImage(named: )
+//            case .map:
+//                return UIImage(named: )
+//            case .profile:
+//                return UIImage(named: )
+//            case .clubs:
+//                return UIImage(named: )
+//            case .search:
+//                return UIImage(named: )
+//            }
+//        }
+    }
+    
+    enum SlideOutState{
+        case bothCollapsed
+        case leftPanelExpanded
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
         storyboardName = "Map"
         switch storyboardName {
         case "Profile":
@@ -90,7 +150,7 @@ extension ConteinerViewController: UserProfileVCDelegate, NewsViewControllerDele
         guard leftViewController == nil else { return }
         
         if let vc = UIStoryboard.leftViewController(){
-            vc.menuPoints = Menu.allMenuPoints()
+//            vc.menuPoints = Menu.allMenuPoints()
             addChildSidePanelController(vc)
             leftViewController = vc
         }
@@ -141,7 +201,6 @@ private extension UIStoryboard{
 extension ConteinerViewController: UIGestureRecognizerDelegate {
     @objc func handlePanGesture(_ recognizer: UIPanGestureRecognizer){
         let gestureIsDraggingFromLeftToRight = (recognizer.velocity(in: view).x > 0)
-        
         switch recognizer.state {
         case .began:
             if currentState ==  .bothCollapsed{
@@ -183,7 +242,7 @@ extension ConteinerViewController: SlidePanelViewControllerDelegate{
 //
 //        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
 //        centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
-        delegate?.collapseSlidePanel!()
+        delegate?.collapseSlidePanel()
     }
     
     
