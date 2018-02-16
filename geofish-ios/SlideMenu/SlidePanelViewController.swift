@@ -9,39 +9,40 @@
 import UIKit
 
 class SlidePanelViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
     
+    //MARK: - UI переменные
+    @IBOutlet weak var nameLabel                : UILabel!
+    @IBOutlet weak var userImageView            : UIImageView!
+    @IBOutlet weak var sideBarItemsTableView    : UITableView!
+    
+    //MARK: - Переменные
     var delegate: SlidePanelViewControllerDelegate?
-    var menuPoints: Array<Menu>!
+    var currentControllerItem: SideBarItems!
     
-    enum CellIdentifier{
-        static let MenuCell = "menuCell"
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.reloadData()
-    }
 }
 
-extension SlidePanelViewController: UITableViewDataSource{
+//MARK: - Table View Delegate & Data Source
+extension SlidePanelViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuPoints.count
+        return currentControllerItem.getCountItems()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.MenuCell, for: indexPath) as! MenuTableViewCell
-        cell.configurationForMenu(menuPoints[indexPath.row])
+        guard let item = SideBarItems(rawValue: indexPath.item) else { return UITableViewCell() }
+        let cell = tableView.dequeueReusableCell(withIdentifier: SidePanelItemTableViewCell.cellIdentifier, for: indexPath) as! SidePanelItemTableViewCell
+        
+        cell.prepareView(item: item, item == currentControllerItem ? .active : .inactive)
+        
         return cell
     }
-}
-
-extension SlidePanelViewController: UITableViewDelegate{
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let menu = menuPoints[indexPath.row]
-        delegate?.didSelectMenu(menu)
+        guard let item = SideBarItems(rawValue: indexPath.item) else { return }
+        currentControllerItem = item
+        
+        tableView.reloadData()
+        delegate?.didSelectMenu(item)
     }
+    
 }

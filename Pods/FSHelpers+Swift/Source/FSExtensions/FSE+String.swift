@@ -14,7 +14,7 @@ public extension String {
     public func fs_toInt      () -> Int?      {return Int(self)}
     
     public var fs_length: Int {
-        return self.characters.count
+        return self.count
     }
     
     public func fs_getRowHeight (_ font: UIFont) -> CGFloat {
@@ -113,7 +113,7 @@ public extension String {
     }
     
     public subscript (i: Int) -> Character {
-        return self[self.characters.index(self.startIndex, offsetBy: i)]
+        return self[self.index(self.startIndex, offsetBy: i)]
     }
     
     public subscript (i: Int) -> String {
@@ -121,6 +121,6 @@ public extension String {
     }
     
     public subscript (range: Range<Int>) -> String {
-        return self.substring(with: Range(self.characters.index(self.startIndex, offsetBy: range.lowerBound) ..< self.characters.index(self.startIndex, offsetBy: range.upperBound)))
+        return self.substring(with: Range(self.index(self.startIndex, offsetBy: range.lowerBound) ..< self.index(self.startIndex, offsetBy: range.upperBound)))
     }
 }

@@ -8,15 +8,11 @@
 
 import UIKit
 
-class NewsViewController: UIViewController {
+class NewsViewController: UIViewController, ControllerInSideBar {
 
-    var delegate: NewsViewControllerDelegate?
+    var delegate: ConteinerViewControllerDelegate?
     
     @IBOutlet weak var tableView: CustomTableView!
-    
-    @IBAction func slideMenu(_ sender: Any){
-        delegate?.toggleLeftPanel!()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +20,10 @@ class NewsViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 43, green: 33, blue: 69, alpha: 1)
         tableView.register(FeedCell.self, forCellReuseIdentifier: cellID)
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func sideBarButtonAction(_ sender: UIBarButtonItem) {
+        delegate?.currentState == .bothCollapsed ? delegate?.toggleLeftPanel() : delegate?.collapseSlidePanel()
     }
     
 }
@@ -40,11 +40,5 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate{
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
-    }
-}
-
-extension NewsViewController: SlidePanelViewControllerDelegate{
-    func didSelectMenu(_ menu: Menu) {
-        print(menu.title)
     }
 }

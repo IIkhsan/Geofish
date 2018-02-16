@@ -11,7 +11,7 @@ import QuartzCore
 
 let cellID = "cellID"
 
-class UserProfileVC: UIViewController {
+class UserProfileVC: UIViewController, ControllerInSideBar {
     @IBOutlet weak var tableView: CustomTableView!
     
     @IBOutlet weak var userAvatarBackgroundImage: UIImageView!
@@ -21,24 +21,15 @@ class UserProfileVC: UIViewController {
     @IBOutlet weak var userSubscribersLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     
-    var delegate: UserProfileVCDelegate?
-    
-    @IBAction func slideMenu(_ sender: Any){
-        delegate?.toggleLeftPanel!()
-        print("tap")
-    }
+    var delegate: ConteinerViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.clearColor()
         tableView.register(FeedCell.self, forCellReuseIdentifier: cellID)
     }
-}
-
-extension UserProfileVC: SlidePanelViewControllerDelegate{
-    func didSelectMenu(_ menu: Menu) {
-        print("select")
+    
+    @IBAction func sideBarButtonAction(_ sender: UIBarButtonItem) {
+        delegate?.currentState == .bothCollapsed ? delegate?.toggleLeftPanel() : delegate?.collapseSlidePanel()
     }
-    
-    
 }

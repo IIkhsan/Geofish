@@ -9,10 +9,12 @@
 import UIKit
 
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, ControllerInSideBar {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var segmentedController: CustomSegmentedController!
+    
+    var delegate: ConteinerViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +25,8 @@ class SearchViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func slideMenu(_ sender: Any){
-        
+    @IBAction func sideBarButtonAction(_ sender: UIBarButtonItem) {
+        delegate?.currentState == .bothCollapsed ? delegate?.toggleLeftPanel() : delegate?.collapseSlidePanel()
     }
 
 }

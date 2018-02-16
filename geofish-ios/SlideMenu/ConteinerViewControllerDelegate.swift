@@ -8,8 +8,11 @@
 
 import UIKit
 
-@objc
-protocol ConteinerViewControllerDelegate{
-    @objc optional func toggleLeftPanel()
-    @objc optional func collapseSlidePanel()
+protocol ConteinerViewControllerDelegate {
+    
+    var currentState: SlideOutState {get set}
+    
+    func toggleLeftPanel()
+    func collapseSlidePanel()
+    
 }

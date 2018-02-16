@@ -10,12 +10,14 @@ import UIKit
 import GoogleMaps
 
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, ControllerInSideBar {
 
-    @IBOutlet weak var menuButton: UIBarButtonItem!
+//    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var mapView: GMSMapView!
     
     private let locationManager = CLLocationManager()
+    
+    var delegate: ConteinerViewControllerDelegate?
     
     var lakePoints: Array<LakePlace>!
     
@@ -23,7 +25,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 38/255, green: 90/255, blue: 135/255, alpha: 1)
-        self.menuButton.tintColor = UIColor.white
+//        self.menuButton.tintColor = UIColor.white
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
@@ -37,6 +39,10 @@ class MapViewController: UIViewController {
 //            let marker = PlaceMarker(place: lakepoint)
 //            marker.map = self.mapView
         }
+    }
+    
+    @IBAction func sideBarButtonAction(_ sender: UIBarButtonItem) {
+        delegate?.currentState == .bothCollapsed ? delegate?.toggleLeftPanel() : delegate?.collapseSlidePanel()
     }
 }
 
