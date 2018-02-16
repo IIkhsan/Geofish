@@ -17,13 +17,12 @@ class SlidePanelViewController: UIViewController {
     
     //MARK: - Переменные
     var delegate: SlidePanelViewControllerDelegate?
-//    var currentItem: 
     
 }
 
-extension SlidePanelViewController: UITableViewDelegate{
+extension SlidePanelViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let menu = menuPoints[indexPath.row]
-//        delegate?.didSelectMenu(menu)
+        
     }
 }

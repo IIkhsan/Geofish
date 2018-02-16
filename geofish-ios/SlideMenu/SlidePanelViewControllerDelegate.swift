@@ -10,5 +10,7 @@ import UIKit
 
 
 protocol SlidePanelViewControllerDelegate{
+    
     func didSelectMenu(_ menu: Menu)
+    
 }

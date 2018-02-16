@@ -10,18 +10,22 @@ import UIKit
 
 class ConteinerViewController: UIViewController {
     
+    //MARK: - Enum'ы
+    enum SlideOutState{
+        case bothCollapsed
+        case leftPanelExpanded
+    }
+    
     //MARK: - Переменные
-    var delegate: ConteinerViewControllerDelegate?
+    let centerPanelExpandedOffset           : CGFloat = 161
     
-    var centerNavigationController: UINavigationController!
-    var curentViewController: UIViewController!
-    var profileViewController: UserProfileVC!
-    var newsViewController: NewsViewController!
-    var mapViewController: MapViewController!
-    var searchViewController: SearchViewController!
+    var delegate                            : ConteinerViewControllerDelegate?
+    var currentSideBarItem                  : SideBarItems = .map
     
-    var storyboardName: String!
-    var viewName: String?
+    weak var leftViewController             : SlidePanelViewController?
+    weak var centerNavigationController     : UINavigationController!
+    
+    lazy var storyboardFactory              : StoryboardFactory = StoryboardFactoryImplementation()
     
     var currentState: SlideOutState = .bothCollapsed{
         didSet {
@@ -30,195 +34,125 @@ class ConteinerViewController: UIViewController {
         }
     }
     
-    var leftViewController: SlidePanelViewController?
-    
-    let centerPanelExpandedOffset: CGFloat = 40
-    
-    //MARK: - Enum'ы
-    enum SideBarItems: Int {
-        
-        case news = 0
-        case map
-        case profile
-        case clubs
-        case search
-        
-//        var description: String {
-//            switch self {
-//            case .news:
-//                return "Новости"
-//            case .map:
-//                return "Карта"
-//            case .profile:
-//                return "Профиль"
-//            case .clubs:
-//                return "Клубы"
-//            case .search:
-//                return "Поиск"
-//            }
-//        }
-//
-//        var activeImage: UIImage? {
-//            switch self {
-//            case .news:
-//                return UIImage(named: )
-//            case .map:
-//                return UIImage(named: )
-//            case .profile:
-//                return UIImage(named: )
-//            case .clubs:
-//                return UIImage(named: )
-//            case .search:
-//                return UIImage(named: )
-//            }
-//        }
-        
-//        var inactionImage: UIImage? {
-//            switch self {
-//            case .news:
-//                return UIImage(named: )
-//            case .map:
-//                return UIImage(named: )
-//            case .profile:
-//                return UIImage(named: )
-//            case .clubs:
-//                return UIImage(named: )
-//            case .search:
-//                return UIImage(named: )
-//            }
-//        }
-    }
-    
-    enum SlideOutState{
-        case bothCollapsed
-        case leftPanelExpanded
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UIApplication.shared.statusBarStyle = .lightContent
+        prepareView()
         
-        storyboardName = "Map"
-        switch storyboardName {
-        case "Profile":
-            profileViewController = UIStoryboard(name: "Profile", bundle: Bundle.main).instantiateInitialViewController() as! UserProfileVC
-            profileViewController.delegate = self
-            centerNavigationController = UINavigationController(rootViewController: profileViewController)
-        case "News":
-            newsViewController = UIStoryboard(name: "News", bundle: Bundle.main).instantiateInitialViewController() as! NewsViewController
-            newsViewController.delegate = self
-            centerNavigationController = UINavigationController(rootViewController: newsViewController)
-        case "Map":
-            mapViewController = UIStoryboard(name: "Map", bundle: Bundle.main).instantiateInitialViewController() as! MapViewController
-            centerNavigationController = UINavigationController(rootViewController: mapViewController)
-        case "Search":
-            searchViewController = UIStoryboard(name: "Search", bundle: Bundle.main).instantiateInitialViewController() as! SearchViewController
-            centerNavigationController = UINavigationController(rootViewController: searchViewController)
-        default:
-            break
-        }
+    }
+    
+    func prepareView() {
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
+        UIApplication.shared.statusBarStyle = .lightContent
+        centerNavigationController = UINavigationController(rootViewController: storyboardFactory.getStoryboard(with: currentSideBarItem.appStoryboard).instantiateInitialViewController() ?? UIViewController())
         
         view.addSubview(centerNavigationController.view)
         addChildViewController(centerNavigationController)
-        
         centerNavigationController.didMove(toParentViewController: self)
-        
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
         centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
-
-    }
-}
-
-extension ConteinerViewController: UserProfileVCDelegate, NewsViewControllerDelegate, ConteinerViewControllerDelegate{
-    func toggleLeftPanel(){
-        let notAlredyExpanded = (currentState != .leftPanelExpanded)
-        if notAlredyExpanded {
-            addLeftPanelViewController()
-        }
-        animateLeftPanel(shouldExpand: notAlredyExpanded)
-    }
-    func collapseSlidePanel() {
-        switch currentState {
-        case .leftPanelExpanded:
-            toggleLeftPanel()
-        default:
-            break
-        }
-    }
-    func addLeftPanelViewController(){
-        guard leftViewController == nil else { return }
-        
-        if let vc = UIStoryboard.leftViewController(){
-//            vc.menuPoints = Menu.allMenuPoints()
-            addChildSidePanelController(vc)
-            leftViewController = vc
-        }
-    }
-    func addChildSidePanelController(_ slidePanelController: SlidePanelViewController){
-        slidePanelController.delegate = self
-        view.insertSubview(slidePanelController.view, at: 0)
-        
-        addChildViewController(slidePanelController)
-        slidePanelController.didMove(toParentViewController: self)
     }
     
-    func animateLeftPanel(shouldExpand: Bool){ //проверяет было ли предложено свернуть или развернуть панель
-        if shouldExpand{
+}
+
+extension ConteinerViewController: ConteinerViewControllerDelegate{
+    
+    func toggleLeftPanel() {
+        let notAlreadyExpanded = (currentState != .leftPanelExpanded)
+        
+        if notAlreadyExpanded {
+            addLeftPanelViewController()
+        }
+        animateLeftPanel(shouldExpand: notAlreadyExpanded)
+    }
+    
+    func collapseSlidePanel() {
+
+        switch currentState {
+            case .leftPanelExpanded:
+                toggleLeftPanel()
+            default:
+                break
+        }
+        
+    }
+    
+    func addChildSidePanelController(_ sidePanelController: SlidePanelViewController) {
+        view.insertSubview(sidePanelController.view, at: 0)
+        addChildViewController(sidePanelController)
+        sidePanelController.didMove(toParentViewController: self)
+    }
+    
+    func addLeftPanelViewController() {
+        guard leftViewController == nil else { return }
+        
+        if let vc = storyboardFactory.getStoryboard(with: .slideMenu).instantiateInitialViewController() as? SlidePanelViewController {
+            leftViewController = vc
+            addChildSidePanelController(vc)
+        }
+        
+    }
+    
+    func animateLeftPanel(shouldExpand: Bool) {
+        if shouldExpand {
             currentState = .leftPanelExpanded
-            animateCenterPanelXPosition(targetPosition: centerNavigationController.view.frame.width - centerPanelExpandedOffset)
-        } else{
-            animateCenterPanelXPosition(targetPosition: 0) {finished in
+            animateCenterPanelXPosition(
+                targetPosition: centerNavigationController.view.frame.width - centerPanelExpandedOffset)
+        } else {
+            animateCenterPanelXPosition(targetPosition: 0) { [weak self] finished in
+                guard let `self` = self else { return }
                 self.currentState = .bothCollapsed
                 self.leftViewController?.view.removeFromSuperview()
                 self.leftViewController = nil
             }
         }
     }
-    func animateCenterPanelXPosition(targetPosition: CGFloat, completion: ((Bool) -> Void)? = nil){
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            self.centerNavigationController.view.frame.origin.x = targetPosition
+    
+    func animateCenterPanelXPosition(targetPosition: CGFloat, completion: ((Bool) -> Void)? = nil) {
+        UIView.animate(withDuration: 0.5,
+                       delay: 0,
+                       usingSpringWithDamping: 0.8,
+                       initialSpringVelocity: 0,
+                       options: .curveEaseInOut, animations: { [weak self] in
+                        guard let `self` = self else { return }
+                        self.centerNavigationController.view.frame.origin.x = targetPosition
         }, completion: completion)
     }
-    func showShadowForCenterViewController(_ shouldShowShadow: Bool){
-        if shouldShowShadow{
+    
+    func showShadowForCenterViewController(_ shouldShowShadow: Bool) {
+        if shouldShowShadow {
             centerNavigationController.view.layer.shadowOpacity = 0.8
-        } else{
+        } else {
             centerNavigationController.view.layer.shadowOpacity = 0.0
         }
     }
-}
-
-private extension UIStoryboard{
-    static func slideMenu() -> UIStoryboard {
-        return UIStoryboard(name: "SlideMenu", bundle: Bundle.main)
-    }
-    static func leftViewController() -> SlidePanelViewController? {
-        return slideMenu().instantiateViewController(withIdentifier: "LeftViewController") as? SlidePanelViewController
-    }
+    
 }
 
 extension ConteinerViewController: UIGestureRecognizerDelegate {
-    @objc func handlePanGesture(_ recognizer: UIPanGestureRecognizer){
+    
+    @objc func handlePanGesture(_ recognizer: UIPanGestureRecognizer) {
         let gestureIsDraggingFromLeftToRight = (recognizer.velocity(in: view).x > 0)
+        
         switch recognizer.state {
+            
         case .began:
-            if currentState ==  .bothCollapsed{
-                if gestureIsDraggingFromLeftToRight{
+            if currentState == .bothCollapsed {
+                if gestureIsDraggingFromLeftToRight {
                     addLeftPanelViewController()
+                    showShadowForCenterViewController(true)
                 }
             }
-            showShadowForCenterViewController(true)
+            
         case .changed:
-            if let rview = recognizer.view{
-                let shuldOpenLeft = (recognizer.translation(in: view).x > 0)
-                if shuldOpenLeft {
+            if self.centerNavigationController.view.frame.origin.x >= 0 || gestureIsDraggingFromLeftToRight {
+                if let rview = recognizer.view {
                     rview.center.x = rview.center.x + recognizer.translation(in: view).x
                     recognizer.setTranslation(CGPoint.zero, in: view)
                 }
             }
+            
         case .ended:
-            if let _ = leftViewController, let rview = recognizer.view{
+            if let rview = recognizer.view {
                 let hasMovedGreaterThanHalfway = rview.center.x > view.bounds.size.width
                 animateLeftPanel(shouldExpand: hasMovedGreaterThanHalfway)
             }
@@ -226,24 +160,14 @@ extension ConteinerViewController: UIGestureRecognizerDelegate {
             break
         }
     }
+    
 }
 
-extension ConteinerViewController: SlidePanelViewControllerDelegate{
+extension ConteinerViewController: SlidePanelViewControllerDelegate {
+    
     func didSelectMenu(_ menu: Menu) {
-        self.storyboardName = menu.storyboardName
-        
-//        profileViewController = UIStoryboard(name: "Profile", bundle: Bundle.main).instantiateInitialViewController() as! UserProfileVC
-//        profileViewController.delegate = self
-//        centerNavigationController = UINavigationController(rootViewController: profileViewController)
-//        view.addSubview(centerNavigationController.view)
-//        addChildViewController(centerNavigationController)
-//
-//        centerNavigationController.didMove(toParentViewController: self)
-//
-//        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
-//        centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
+//        self.storyboardName = menu.storyboardName
         delegate?.collapseSlidePanel()
     }
-    
     
 }

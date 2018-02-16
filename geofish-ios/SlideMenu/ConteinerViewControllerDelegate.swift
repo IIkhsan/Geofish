@@ -9,6 +9,8 @@
 import UIKit
 
 protocol ConteinerViewControllerDelegate{
+    
     func toggleLeftPanel()
     func collapseSlidePanel()
+    
 }

@@ -12,7 +12,7 @@ import GoogleMaps
 
 class MapViewController: UIViewController {
 
-    @IBOutlet weak var menuButton: UIBarButtonItem!
+//    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var mapView: GMSMapView!
     
     private let locationManager = CLLocationManager()
@@ -23,7 +23,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 38/255, green: 90/255, blue: 135/255, alpha: 1)
-        self.menuButton.tintColor = UIColor.white
+//        self.menuButton.tintColor = UIColor.white
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()

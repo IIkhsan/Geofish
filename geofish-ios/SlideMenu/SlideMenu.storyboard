@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="85a-0y-JJq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Slide Panel View Controller-->
         <scene sceneID="Tjb-mv-xNn">
             <objects>
-                <viewController storyboardIdentifier="LeftViewController" id="85a-0y-JJq" customClass="SlidePanelViewController" customModule="geofish_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="85a-0y-JJq" customClass="SlidePanelViewController" customModule="geofish_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GJg-Ds-IFv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,6 +80,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M9R-7A-Q3x"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="70y-sl-0B3" id="BBX-XC-MXI"/>
+                        <outlet property="userImageView" destination="k08-JW-Gjb" id="rJz-Ji-h4O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFm-bJ-fiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

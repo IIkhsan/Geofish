@@ -60,7 +60,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Карп">
                                         <attributes>
-                                            <font key="NSFont" size="36" name="SFUIDisplay-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="36"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>

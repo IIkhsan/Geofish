@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE7455C42036B822004C2CD3 /* StoryboardFactoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7455C22036B821004C2CD3 /* StoryboardFactoryImplementation.swift */; };
+		AE7455C52036B822004C2CD3 /* StoryboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7455C32036B822004C2CD3 /* StoryboardFactory.swift */; };
+		AE7455C82036BB3B004C2CD3 /* SideBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7455C72036BB3B004C2CD3 /* SideBarItems.swift */; };
 		C00AE2691FE94E290013EA90 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00AE2681FE94E290013EA90 /* FeedCell.swift */; };
 		C031A1D31FF2E5320007886D /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C031A1D21FF2E5320007886D /* CustomTableView.swift */; };
 		C0343EE7202CC72D00DC8432 /* SlideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0343EE6202CC72D00DC8432 /* SlideMenu.storyboard */; };
@@ -60,6 +63,9 @@
 
 /* Begin PBXFileReference section */
 		3ABF10A1F8C23E8C1D48CB93 /* Pods-geofish-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geofish-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-geofish-ios/Pods-geofish-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		AE7455C22036B821004C2CD3 /* StoryboardFactoryImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardFactoryImplementation.swift; sourceTree = "<group>"; };
+		AE7455C32036B822004C2CD3 /* StoryboardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardFactory.swift; sourceTree = "<group>"; };
+		AE7455C72036BB3B004C2CD3 /* SideBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarItems.swift; sourceTree = "<group>"; };
 		C00AE2681FE94E290013EA90 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		C031A1D21FF2E5320007886D /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		C0343EE6202CC72D00DC8432 /* SlideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SlideMenu.storyboard; sourceTree = "<group>"; };
@@ -143,6 +149,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AE7455C62036B827004C2CD3 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				AE7455C32036B822004C2CD3 /* StoryboardFactory.swift */,
+				AE7455C22036B821004C2CD3 /* StoryboardFactoryImplementation.swift */,
+			);
+			name = Factory;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		C02F5AF51F9645F600338F9D /* Login page */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +182,7 @@
 				C0343EEE202CC86000DC8432 /* SlidePanelViewController.swift */,
 				C0343EF0202CC87C00DC8432 /* SlidePanelViewControllerDelegate.swift */,
 				C05BC6A4203094EF005EBED9 /* ConteinerViewControllerDelegate.swift */,
+				AE7455C72036BB3B004C2CD3 /* SideBarItems.swift */,
 			);
 			path = SlideMenu;
 			sourceTree = "<group>";
@@ -262,6 +279,7 @@
 				C038092C2033084500129EE9 /* New Group */,
 				C0B7794E203204720095BD9A /* AboutFishInformation */,
 				C0B7794A2031FE580095BD9A /* CustomSegmentedController.swift */,
+				AE7455C62036B827004C2CD3 /* Factory */,
 				C0BB9C6C2031D0290010FC6C /* Clubs */,
 				C05671462030ADA5002B821B /* Search */,
 				C05671412030A024002B821B /* Map */,
@@ -446,7 +464,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0380932203362AE00129EE9 /* LakePlace.swift in Sources */,
+				AE7455C42036B822004C2CD3 /* StoryboardFactoryImplementation.swift in Sources */,
 				C05671452030A1F4002B821B /* MapViewController.swift in Sources */,
+				AE7455C82036BB3B004C2CD3 /* SideBarItems.swift in Sources */,
 				C05BC6A320308AC8005EBED9 /* NewsViewControllerDelegate.swift in Sources */,
 				C0C8E8411FBF2B360076CD51 /* UserProfileTableExtension.swift in Sources */,
 				C0394FA21F9E0BF20002D5D5 /* BirthdayСityVC.swift in Sources */,
@@ -477,6 +497,7 @@
 				C0380934203368F600129EE9 /* GoogleDataProvider.swift in Sources */,
 				C04ED3771FC71BD4000B984F /* StringExtension.swift in Sources */,
 				C0394F9C1F9DD3570002D5D5 /* UIViewControllerExtension.swift in Sources */,
+				AE7455C52036B822004C2CD3 /* StoryboardFactory.swift in Sources */,
 				C0343EED202CC83E00DC8432 /* ConteinerViewController.swift in Sources */,
 				C0394FA71F9F3D800002D5D5 /* AddPhotoVC.swift in Sources */,
 				C0B77950203204A70095BD9A /* AboutFishInformationViewController.swift in Sources */,
