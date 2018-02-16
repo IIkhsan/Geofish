@@ -11,6 +11,6 @@ import UIKit
 
 protocol SlidePanelViewControllerDelegate{
     
-    func didSelectMenu(_ menu: Menu)
+    func didSelectMenu(_ item: SideBarItems)
     
 }

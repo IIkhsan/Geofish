@@ -10,6 +10,8 @@
 		AE7455C42036B822004C2CD3 /* StoryboardFactoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7455C22036B821004C2CD3 /* StoryboardFactoryImplementation.swift */; };
 		AE7455C52036B822004C2CD3 /* StoryboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7455C32036B822004C2CD3 /* StoryboardFactory.swift */; };
 		AE7455C82036BB3B004C2CD3 /* SideBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7455C72036BB3B004C2CD3 /* SideBarItems.swift */; };
+		AE7455CC2036C1D7004C2CD3 /* SidePanelItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7455CB2036C1D7004C2CD3 /* SidePanelItemTableViewCell.swift */; };
+		AE7455CE2036C59E004C2CD3 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7455CD2036C59E004C2CD3 /* UITableViewCell.swift */; };
 		C00AE2691FE94E290013EA90 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00AE2681FE94E290013EA90 /* FeedCell.swift */; };
 		C031A1D31FF2E5320007886D /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C031A1D21FF2E5320007886D /* CustomTableView.swift */; };
 		C0343EE7202CC72D00DC8432 /* SlideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0343EE6202CC72D00DC8432 /* SlideMenu.storyboard */; };
@@ -66,6 +68,8 @@
 		AE7455C22036B821004C2CD3 /* StoryboardFactoryImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardFactoryImplementation.swift; sourceTree = "<group>"; };
 		AE7455C32036B822004C2CD3 /* StoryboardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardFactory.swift; sourceTree = "<group>"; };
 		AE7455C72036BB3B004C2CD3 /* SideBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarItems.swift; sourceTree = "<group>"; };
+		AE7455CB2036C1D7004C2CD3 /* SidePanelItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePanelItemTableViewCell.swift; sourceTree = "<group>"; };
+		AE7455CD2036C59E004C2CD3 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		C00AE2681FE94E290013EA90 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		C031A1D21FF2E5320007886D /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		C0343EE6202CC72D00DC8432 /* SlideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SlideMenu.storyboard; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 				C0343EE6202CC72D00DC8432 /* SlideMenu.storyboard */,
 				C0343EEC202CC83E00DC8432 /* ConteinerViewController.swift */,
 				C0343EEE202CC86000DC8432 /* SlidePanelViewController.swift */,
+				AE7455CB2036C1D7004C2CD3 /* SidePanelItemTableViewCell.swift */,
 				C0343EF0202CC87C00DC8432 /* SlidePanelViewControllerDelegate.swift */,
 				C05BC6A4203094EF005EBED9 /* ConteinerViewControllerDelegate.swift */,
 				AE7455C72036BB3B004C2CD3 /* SideBarItems.swift */,
@@ -214,6 +219,7 @@
 				C050A1B01FBED78C0061AF05 /* UIImageExtension.swift */,
 				C050A1B21FBEE3610061AF05 /* UITextFieldExtension.swift */,
 				C04ED3761FC71BD4000B984F /* StringExtension.swift */,
+				AE7455CD2036C59E004C2CD3 /* UITableViewCell.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -477,6 +483,7 @@
 				C0394F981F9DD20C0002D5D5 /* WelcomeVC.swift in Sources */,
 				C05BC6A5203094EF005EBED9 /* ConteinerViewControllerDelegate.swift in Sources */,
 				C0394F9E1F9E023C0002D5D5 /* LoginVC.swift in Sources */,
+				AE7455CE2036C59E004C2CD3 /* UITableViewCell.swift in Sources */,
 				C0BB9C6B2031CFF70010FC6C /* SearchViewController.swift in Sources */,
 				C0343EEF202CC86000DC8432 /* SlidePanelViewController.swift in Sources */,
 				C0394FB01FA263C60002D5D5 /* NetworkHelper.swift in Sources */,
@@ -499,6 +506,7 @@
 				C0394F9C1F9DD3570002D5D5 /* UIViewControllerExtension.swift in Sources */,
 				AE7455C52036B822004C2CD3 /* StoryboardFactory.swift in Sources */,
 				C0343EED202CC83E00DC8432 /* ConteinerViewController.swift in Sources */,
+				AE7455CC2036C1D7004C2CD3 /* SidePanelItemTableViewCell.swift in Sources */,
 				C0394FA71F9F3D800002D5D5 /* AddPhotoVC.swift in Sources */,
 				C0B77950203204A70095BD9A /* AboutFishInformationViewController.swift in Sources */,
 				C0B7794B2031FE580095BD9A /* CustomSegmentedController.swift in Sources */,

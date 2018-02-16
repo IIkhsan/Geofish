@@ -46,33 +46,37 @@ enum SideBarItems: Int {
         }
     }
     
-    //        var activeImage: UIImage? {
-    //            switch self {
-    //            case .news:
-    //                return UIImage(named: )
-    //            case .map:
-    //                return UIImage(named: )
-    //            case .profile:
-    //                return UIImage(named: )
-    //            case .clubs:
-    //                return UIImage(named: )
-    //            case .search:
-    //                return UIImage(named: )
-    //            }
-    //        }
-    //
-    //        var inactionImage: UIImage? {
-    //            switch self {
-    //            case .news:
-    //                return UIImage(named: )
-    //            case .map:
-    //                return UIImage(named: )
-    //            case .profile:
-    //                return UIImage(named: )
-    //            case .clubs:
-    //                return UIImage(named: )
-    //            case .search:
-    //                return UIImage(named: )
-    //            }
-    //        }
+    func getCountItems() -> Int {
+        return 5
+    }
+    
+    var activeImage: UIImage? {
+        switch self {
+        case .news:
+            return UIImage(named: "Side-news-active")
+        case .map:
+            return UIImage(named: "Side-map-active")
+        case .profile:
+            return UIImage(named: "Side-profile-active")
+        case .clubs:
+            return UIImage(named: "Side-clubs-active")
+        case .search:
+            return UIImage(named: "Side-search-active")
+        }
+    }
+
+    var inactiveImage: UIImage? {
+        switch self {
+        case .news:
+            return UIImage(named: "Side-news-inactive")
+        case .map:
+            return UIImage(named: "Side-map-inactive")
+        case .profile:
+            return UIImage(named: "Side-profile-inactive")
+        case .clubs:
+            return UIImage(named: "Side-clubs-inactive")
+        case .search:
+            return UIImage(named: "Side-search-inactive")
+        }
+    }
 }

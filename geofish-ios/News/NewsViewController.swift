@@ -42,9 +42,3 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate{
         return 1
     }
 }
-
-extension NewsViewController: SlidePanelViewControllerDelegate{
-    func didSelectMenu(_ menu: Menu) {
-        print(menu.title)
-    }
-}

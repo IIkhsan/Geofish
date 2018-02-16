@@ -20,14 +20,18 @@ class ConteinerViewController: UIViewController {
     let centerPanelExpandedOffset           : CGFloat = 161
     
     var delegate                            : ConteinerViewControllerDelegate?
-    var currentSideBarItem                  : SideBarItems = .map
+    var currentSideBarItem                  : SideBarItems = .map {
+        didSet {
+            setViewControllerToContainer()
+        }
+    }
     
     weak var leftViewController             : SlidePanelViewController?
     weak var centerNavigationController     : UINavigationController!
     
     lazy var storyboardFactory              : StoryboardFactory = StoryboardFactoryImplementation()
     
-    var currentState: SlideOutState = .bothCollapsed{
+    var currentState: SlideOutState = .bothCollapsed {
         didSet {
             let shouldShadowShow = currentState != .bothCollapsed
             showShadowForCenterViewController(shouldShadowShow)
@@ -44,12 +48,18 @@ class ConteinerViewController: UIViewController {
     func prepareView() {
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
         UIApplication.shared.statusBarStyle = .lightContent
+        
         centerNavigationController = UINavigationController(rootViewController: storyboardFactory.getStoryboard(with: currentSideBarItem.appStoryboard).instantiateInitialViewController() ?? UIViewController())
         
+        setViewControllerToContainer()
+        centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
+    }
+    
+    func setViewControllerToContainer() {
+        centerNavigationController.setViewControllers([storyboardFactory.getStoryboard(with: currentSideBarItem.appStoryboard).instantiateInitialViewController() ?? UIViewController()], animated: false)
         view.addSubview(centerNavigationController.view)
         addChildViewController(centerNavigationController)
         centerNavigationController.didMove(toParentViewController: self)
-        centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
     }
     
 }
@@ -86,6 +96,8 @@ extension ConteinerViewController: ConteinerViewControllerDelegate{
         guard leftViewController == nil else { return }
         
         if let vc = storyboardFactory.getStoryboard(with: .slideMenu).instantiateInitialViewController() as? SlidePanelViewController {
+            vc.currentControllerItem = currentSideBarItem
+            vc.delegate = self
             leftViewController = vc
             addChildSidePanelController(vc)
         }
@@ -165,9 +177,9 @@ extension ConteinerViewController: UIGestureRecognizerDelegate {
 
 extension ConteinerViewController: SlidePanelViewControllerDelegate {
     
-    func didSelectMenu(_ menu: Menu) {
-//        self.storyboardName = menu.storyboardName
-        delegate?.collapseSlidePanel()
+    func didSelectMenu(_ item: SideBarItems) {
+        currentSideBarItem = item
+        collapseSlidePanel()
     }
     
 }

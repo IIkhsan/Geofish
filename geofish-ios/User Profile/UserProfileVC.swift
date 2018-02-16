@@ -34,11 +34,3 @@ class UserProfileVC: UIViewController {
         tableView.register(FeedCell.self, forCellReuseIdentifier: cellID)
     }
 }
-
-extension UserProfileVC: SlidePanelViewControllerDelegate{
-    func didSelectMenu(_ menu: Menu) {
-        print("select")
-    }
-    
-    
-}

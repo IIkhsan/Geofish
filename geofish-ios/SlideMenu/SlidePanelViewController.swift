@@ -17,12 +17,32 @@ class SlidePanelViewController: UIViewController {
     
     //MARK: - Переменные
     var delegate: SlidePanelViewControllerDelegate?
+    var currentControllerItem: SideBarItems!
     
 }
 
-extension SlidePanelViewController: UITableViewDelegate {
+//MARK: - Table View Delegate & Data Source
+extension SlidePanelViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return currentControllerItem.getCountItems()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let item = SideBarItems(rawValue: indexPath.item) else { return UITableViewCell() }
+        let cell = tableView.dequeueReusableCell(withIdentifier: SidePanelItemTableViewCell.cellIdentifier, for: indexPath) as! SidePanelItemTableViewCell
+        
+        cell.prepareView(item: item, item == currentControllerItem ? .active : .inactive)
+        
+        return cell
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let item = SideBarItems(rawValue: indexPath.item) else { return }
+        currentControllerItem = item
         
+        tableView.reloadData()
+        delegate?.didSelectMenu(item)
     }
+    
 }
