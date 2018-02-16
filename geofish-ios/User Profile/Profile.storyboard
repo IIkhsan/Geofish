@@ -206,7 +206,7 @@
                     <navigationItem key="navigationItem" id="rF9-Is-miK">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="slidebarmenu_open_icon" id="GsI-ey-6Kc">
                             <connections>
-                                <action selector="slideMenu:" destination="z1g-gq-ajz" id="ac3-4P-iDP"/>
+                                <action selector="sideBarButtonAction:" destination="z1g-gq-ajz" id="3dd-k5-MT1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

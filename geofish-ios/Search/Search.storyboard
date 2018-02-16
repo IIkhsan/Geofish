@@ -62,7 +62,7 @@
                     <navigationItem key="navigationItem" title="Поиск" id="uzd-qJ-z79">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="slidebarmenu_open_icon" id="1SW-v5-37a">
                             <connections>
-                                <action selector="slideMenu:" destination="BMZ-LM-IfH" id="pw9-gb-cir"/>
+                                <action selector="sideBarButtonAction:" destination="BMZ-LM-IfH" id="xb8-lI-D0a"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

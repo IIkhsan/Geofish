@@ -58,7 +58,7 @@
                     <navigationItem key="navigationItem" title="News" id="b2O-Qy-iiz">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="slidebarmenu_open_icon" id="np1-0Z-hOA">
                             <connections>
-                                <action selector="slideMenu:" destination="uVt-Pw-0Q8" id="ebY-QH-TEm"/>
+                                <action selector="sideBarButtonAction:" destination="uVt-Pw-0Q8" id="ryB-03-9pe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -12,6 +12,7 @@
 		AE7455C82036BB3B004C2CD3 /* SideBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7455C72036BB3B004C2CD3 /* SideBarItems.swift */; };
 		AE7455CC2036C1D7004C2CD3 /* SidePanelItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7455CB2036C1D7004C2CD3 /* SidePanelItemTableViewCell.swift */; };
 		AE7455CE2036C59E004C2CD3 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7455CD2036C59E004C2CD3 /* UITableViewCell.swift */; };
+		AE7455D02036E8B6004C2CD3 /* ControllerInSideBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7455CF2036E8B6004C2CD3 /* ControllerInSideBarProtocol.swift */; };
 		C00AE2691FE94E290013EA90 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00AE2681FE94E290013EA90 /* FeedCell.swift */; };
 		C031A1D31FF2E5320007886D /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C031A1D21FF2E5320007886D /* CustomTableView.swift */; };
 		C0343EE7202CC72D00DC8432 /* SlideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0343EE6202CC72D00DC8432 /* SlideMenu.storyboard */; };
@@ -70,6 +71,7 @@
 		AE7455C72036BB3B004C2CD3 /* SideBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarItems.swift; sourceTree = "<group>"; };
 		AE7455CB2036C1D7004C2CD3 /* SidePanelItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePanelItemTableViewCell.swift; sourceTree = "<group>"; };
 		AE7455CD2036C59E004C2CD3 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		AE7455CF2036E8B6004C2CD3 /* ControllerInSideBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerInSideBarProtocol.swift; sourceTree = "<group>"; };
 		C00AE2681FE94E290013EA90 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		C031A1D21FF2E5320007886D /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		C0343EE6202CC72D00DC8432 /* SlideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SlideMenu.storyboard; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				AE7455CB2036C1D7004C2CD3 /* SidePanelItemTableViewCell.swift */,
 				C0343EF0202CC87C00DC8432 /* SlidePanelViewControllerDelegate.swift */,
 				C05BC6A4203094EF005EBED9 /* ConteinerViewControllerDelegate.swift */,
+				AE7455CF2036E8B6004C2CD3 /* ControllerInSideBarProtocol.swift */,
 				AE7455C72036BB3B004C2CD3 /* SideBarItems.swift */,
 			);
 			path = SlideMenu;
@@ -474,6 +477,7 @@
 				C05671452030A1F4002B821B /* MapViewController.swift in Sources */,
 				AE7455C82036BB3B004C2CD3 /* SideBarItems.swift in Sources */,
 				C05BC6A320308AC8005EBED9 /* NewsViewControllerDelegate.swift in Sources */,
+				AE7455D02036E8B6004C2CD3 /* ControllerInSideBarProtocol.swift in Sources */,
 				C0C8E8411FBF2B360076CD51 /* UserProfileTableExtension.swift in Sources */,
 				C0394FA21F9E0BF20002D5D5 /* BirthdayСityVC.swift in Sources */,
 				C0BB9C702031D04C0010FC6C /* ClubsViewController.swift in Sources */,

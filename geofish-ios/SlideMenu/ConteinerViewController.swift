@@ -8,13 +8,13 @@
 
 import UIKit
 
+//MARK: - Enum
+enum SlideOutState{
+    case bothCollapsed
+    case leftPanelExpanded
+}
+
 class ConteinerViewController: UIViewController {
-    
-    //MARK: - Enum'ы
-    enum SlideOutState{
-        case bothCollapsed
-        case leftPanelExpanded
-    }
     
     //MARK: - Переменные
     let centerPanelExpandedOffset           : CGFloat = 161
@@ -50,13 +50,17 @@ class ConteinerViewController: UIViewController {
         UIApplication.shared.statusBarStyle = .lightContent
         
         centerNavigationController = UINavigationController(rootViewController: storyboardFactory.getStoryboard(with: currentSideBarItem.appStoryboard).instantiateInitialViewController() ?? UIViewController())
+        centerNavigationController.navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "afdfsad", style: .plain, target: self, action: #selector(toggleLeftPanel))
+//        centerNavigationController.navigationItem.leftBarButtonItem =
         
         setViewControllerToContainer()
         centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
     }
     
     func setViewControllerToContainer() {
-        centerNavigationController.setViewControllers([storyboardFactory.getStoryboard(with: currentSideBarItem.appStoryboard).instantiateInitialViewController() ?? UIViewController()], animated: false)
+        guard var vc = storyboardFactory.getStoryboard(with: currentSideBarItem.appStoryboard).instantiateInitialViewController() as? ControllerInSideBar else { return }
+        vc.delegate = self
+        centerNavigationController.setViewControllers([vc as! UIViewController], animated: false)
         view.addSubview(centerNavigationController.view)
         addChildViewController(centerNavigationController)
         centerNavigationController.didMove(toParentViewController: self)
@@ -64,9 +68,9 @@ class ConteinerViewController: UIViewController {
     
 }
 
-extension ConteinerViewController: ConteinerViewControllerDelegate{
+extension ConteinerViewController: ConteinerViewControllerDelegate {
     
-    func toggleLeftPanel() {
+    @objc func toggleLeftPanel() {
         let notAlreadyExpanded = (currentState != .leftPanelExpanded)
         
         if notAlreadyExpanded {
@@ -75,7 +79,7 @@ extension ConteinerViewController: ConteinerViewControllerDelegate{
         animateLeftPanel(shouldExpand: notAlreadyExpanded)
     }
     
-    func collapseSlidePanel() {
+    @objc func collapseSlidePanel() {
 
         switch currentState {
             case .leftPanelExpanded:
