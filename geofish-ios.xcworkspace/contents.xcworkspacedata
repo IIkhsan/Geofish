@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/lenar/Documents/Personal/geofish-ios/GeoFish.xcodeproj">
+      location = "group:/Users/lenar/Documents/Personal/geofish-ios/geofish-ios.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

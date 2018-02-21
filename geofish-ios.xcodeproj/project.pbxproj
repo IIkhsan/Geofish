@@ -379,7 +379,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C07511081F948ADB0035B906 /* Build configuration list for PBXProject "GeoFish" */;
+			buildConfigurationList = C07511081F948ADB0035B906 /* Build configuration list for PBXProject "geofish-ios" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -683,7 +683,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C07511081F948ADB0035B906 /* Build configuration list for PBXProject "GeoFish" */ = {
+		C07511081F948ADB0035B906 /* Build configuration list for PBXProject "geofish-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C075111D1F948ADB0035B906 /* Debug */,
