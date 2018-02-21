@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IKz-qP-TvF">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,11 +11,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="geofish_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNi-5b-nhQ">
-                                <rect key="frame" x="24" y="451.5" width="327" height="50"/>
+                                <rect key="frame" x="24" y="384" width="552" height="50"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="csb-vT-YLa"/>
@@ -38,14 +34,14 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="6kA-sG-gtS">
-                                <rect key="frame" x="24" y="224.5" width="70" height="69"/>
+                                <rect key="frame" x="24" y="157" width="70" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="29T-JF-Opi"/>
                                     <constraint firstAttribute="height" constant="69" id="hYj-Xy-c9D"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlG-GO-IyI">
-                                <rect key="frame" x="24" y="522.5" width="327" height="50"/>
+                                <rect key="frame" x="24" y="455" width="552" height="50"/>
                                 <color key="backgroundColor" red="0.29411764705882354" green="0.45490196078431372" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="osU-2r-Alv"/>
@@ -64,7 +60,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuB-Ay-Av5">
-                                <rect key="frame" x="24" y="593" width="158.5" height="50"/>
+                                <rect key="frame" x="24" y="526" width="271" height="50"/>
                                 <color key="backgroundColor" red="0.29803921568627451" green="0.45882352941176469" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="vk-icon"/>
                                 <userDefinedRuntimeAttributes>
@@ -77,7 +73,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0Z-3k-cyI">
-                                <rect key="frame" x="192.5" y="593" width="158.5" height="50"/>
+                                <rect key="frame" x="305" y="526" width="271" height="50"/>
                                 <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="f-icon"/>
                                 <userDefinedRuntimeAttributes>
@@ -89,8 +85,8 @@
                                     <action selector="okAutorizeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WsK-Xm-Ao3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome. GeoFish." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NX6-u0-Mr6">
-                                <rect key="frame" x="24" y="305.5" width="178" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome. geofish-ios." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NX6-u0-Mr6">
+                                <rect key="frame" x="24" y="238" width="178" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="178" id="SIz-EJ-5fb"/>
                                     <constraint firstAttribute="height" constant="86" id="v8q-jh-0xr"/>
@@ -144,17 +140,17 @@
             <objects>
                 <viewController id="CLV-8o-ipm" customClass="SignUpVC" customModule="geofish_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JLQ-yb-flE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDY-5r-FZP">
-                                <rect key="frame" x="24" y="89" width="327" height="38.5"/>
+                                <rect key="frame" x="24" y="45" width="552" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Wg-ON-RLT" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="152.5" width="327" height="50"/>
+                                <rect key="frame" x="24" y="108" width="552" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="PtN-7H-Iz6"/>
                                 </constraints>
@@ -191,7 +187,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIP-oP-vAf">
-                                <rect key="frame" x="24" y="224" width="327" height="50"/>
+                                <rect key="frame" x="24" y="180" width="552" height="50"/>
                                 <color key="backgroundColor" red="0.29411764705882354" green="0.45490196078431372" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5C2-1d-lPS"/>
@@ -245,6 +241,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9lK-fz-ZbK">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -260,11 +257,11 @@
             <objects>
                 <viewController id="5Kn-NJ-qSD" customClass="LoginVC" customModule="geofish_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nt9-d7-NhW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K5i-1i-vYk" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="151.5" width="327" height="50"/>
+                                <rect key="frame" x="24" y="107" width="552" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="M6p-Wz-qnI"/>
                                 </constraints>
@@ -301,7 +298,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wWb-Mt-z95" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="213.5" width="327" height="50"/>
+                                <rect key="frame" x="24" y="169" width="552" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xii-2k-cur"/>
                                 </constraints>
@@ -338,7 +335,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScK-3J-uI5">
-                                <rect key="frame" x="24" y="279" width="327" height="50"/>
+                                <rect key="frame" x="24" y="235" width="552" height="50"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.4549019608" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="MHz-fD-P2v"/>
@@ -357,13 +354,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j60-VK-72b">
-                                <rect key="frame" x="24" y="89" width="78" height="38.5"/>
+                                <rect key="frame" x="24" y="45" width="78" height="38.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hZb-mq-XPd">
-                                <rect key="frame" x="24" y="399" width="123" height="31"/>
+                                <rect key="frame" x="24" y="355" width="123" height="31"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Забыли пароль?">
@@ -411,17 +408,17 @@
             <objects>
                 <viewController storyboardIdentifier="namePassword" id="vta-1y-dYt" customClass="NamePasswordVC" customModule="geofish_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nF1-T3-pI4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя и пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4t-ga-FvS">
-                                <rect key="frame" x="24" y="89" width="327" height="39"/>
+                                <rect key="frame" x="24" y="45" width="552" height="39"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gfe-uC-btV" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="152.5" width="327" height="50"/>
+                                <rect key="frame" x="24" y="108" width="552" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1gF-D7-enf"/>
                                 </constraints>
@@ -461,7 +458,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEW-rP-XJd" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="222.5" width="327" height="50"/>
+                                <rect key="frame" x="24" y="178" width="552" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="OHn-bc-7nk"/>
                                 </constraints>
@@ -501,7 +498,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dU8-WE-2fo" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="292.5" width="327" height="50"/>
+                                <rect key="frame" x="24" y="248" width="552" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="h7Z-He-OXQ"/>
                                 </constraints>
@@ -541,7 +538,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIG-ei-Pw6">
-                                <rect key="frame" x="24" y="367.5" width="327" height="50"/>
+                                <rect key="frame" x="24" y="323" width="552" height="50"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.4549019608" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Csy-2w-ns8"/>
@@ -598,17 +595,17 @@
             <objects>
                 <viewController id="7Od-e8-Png" customClass="BirthdayCityVC" customModule="geofish_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VCa-hd-Mpb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="День рождения и Город" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU3-40-MQv">
-                                <rect key="frame" x="24" y="89" width="327" height="76.5"/>
+                                <rect key="frame" x="24" y="45" width="552" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BDs-gk-gwe" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="190.5" width="327" height="50"/>
+                                <rect key="frame" x="24" y="108" width="552" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="a4s-o4-NzJ"/>
                                 </constraints>
@@ -645,7 +642,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRw-qp-cpf" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="24" y="252.5" width="327" height="50"/>
+                                <rect key="frame" x="24" y="170" width="552" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hFE-n9-669"/>
                                 </constraints>
@@ -682,7 +679,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzI-Qj-LCn">
-                                <rect key="frame" x="24" y="319" width="327" height="50"/>
+                                <rect key="frame" x="24" y="237" width="552" height="50"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.4549019608" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ti0-6e-VTL"/>
@@ -734,17 +731,17 @@
             <objects>
                 <viewController id="9w6-DN-gXd" customClass="AddPhotoVC" customModule="geofish_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8H1-f5-RuF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавление фото" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5G-IA-oyM">
-                                <rect key="frame" x="37.5" y="89" width="300" height="39"/>
+                                <rect key="frame" x="150" y="45" width="300" height="39"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvz-BK-51o">
-                                <rect key="frame" x="24" y="388" width="327" height="50"/>
+                                <rect key="frame" x="24" y="344" width="552" height="50"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.4549019608" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fYe-Bi-uQH"/>
@@ -760,7 +757,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-icon" translatesAutoresizingMaskIntoConstraints="NO" id="HbZ-HJ-Bec">
-                                <rect key="frame" x="137.5" y="158" width="100" height="100"/>
+                                <rect key="frame" x="250" y="114" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="0Tu-Ki-FKN"/>
                                     <constraint firstAttribute="width" constant="100" id="pNe-B7-g84"/>
@@ -772,7 +769,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkL-kp-wMP">
-                                <rect key="frame" x="24" y="287" width="327" height="30"/>
+                                <rect key="frame" x="24" y="243" width="552" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ISN-Ge-IxZ"/>
                                 </constraints>
@@ -783,7 +780,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавьте фото профиля, чтобы ваши друзья узнали вас" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sL-yb-nlc">
-                                <rect key="frame" x="24" y="327" width="327" height="53"/>
+                                <rect key="frame" x="24" y="283" width="552" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="In4-uh-5Qz"/>
                                 </constraints>
@@ -792,7 +789,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0e-O0-0Lz">
-                                <rect key="frame" x="139.5" y="453" width="96" height="32"/>
+                                <rect key="frame" x="252" y="409" width="96" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="V1G-Bp-4eN"/>
                                 </constraints>
